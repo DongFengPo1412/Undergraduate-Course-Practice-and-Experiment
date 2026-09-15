@@ -1,0 +1,405 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOSFET驱动电路工程化汇报</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #003366; 
+            --secondary: #00509d;
+            --accent: #d32f2f; 
+            --bg-light: #f4f7f9;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --white: #ffffff;
+            --shadow: 0 12px 30px rgba(0,0,0,0.2);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a; /* 背景变深，突出PPT */
+            font-family: 'Noto Sans SC', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* 进度条样式 */
+        .progress-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: rgba(255,255,255,0.1);
+            z-index: 100;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: var(--secondary);
+            transition: width 0.3s ease;
+        }
+
+        /* 幻灯片容器 */
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: var(--white);
+            position: absolute;
+            display: none; /* 默认隐藏 */
+            flex-direction: column;
+            padding: 60px 100px;
+            box-shadow: var(--shadow);
+            border-radius: 8px;
+            z-index: 1;
+        }
+
+        .slide-container.active {
+            display: flex; /* 只显示 active 的幻灯片 */
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .slide-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 0 0 40px 0;
+            padding-bottom: 20px;
+            border-bottom: 4px solid var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .content-area {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .full-width-card {
+            background: var(--bg-light);
+            padding: 35px;
+            border-radius: 15px;
+            border-left: 8px solid var(--primary);
+            margin-bottom: 30px;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            width: 100%;
+        }
+
+        .tile {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #e0e6ed;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .tile h3 {
+            font-size: 26px;
+            margin: 0 0 15px 0;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .tile p, .tile li {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        ul { padding-left: 30px; }
+        li { margin-bottom: 12px; }
+
+        .highlight { color: var(--accent); font-weight: 700; }
+
+        /* 针对第5、7页的特别放大排版 */
+        .big-text li {
+            font-size: 26px !important;
+            margin-bottom: 20px !important;
+            line-height: 1.8 !important;
+        }
+
+        /* 封面与结尾 */
+        .title-slide {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+            color: var(--white);
+        }
+
+        .title-slide h1 { font-size: 72px; margin: 0; }
+
+        .footer {
+            position: absolute;
+            bottom: 30px;
+            right: 100px;
+            font-size: 16px;
+            color: #999;
+        }
+
+        .nav-hint {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255,255,255,0.3);
+            font-size: 12px;
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Slide 1: 封面 -->
+    <div class="slide-container active title-slide" id="slide1">
+        <h1>MOSFET驱动电路工程化汇报</h1>
+        <div style="font-size: 32px; margin-top: 30px; opacity: 0.8;">从信号调理到功率驱动的完整链条实现</div>
+        <div style="margin-top: 100px; font-size: 26px;">汇报人：刘超然 | 2026年1月4日</div>
+        <div class="footer">1 / 10</div>
+    </div>
+
+    <!-- Slide 2: 反激电路优化 -->
+    <div class="slide-container" id="slide2">
+        <h2 class="slide-title"><i class="fa-solid fa-bolt-lightning"></i> 1. 反激电路优化：高频滤波功能</h2>
+        <div class="content-area">
+            <div class="full-width-card">
+                <h3 style="font-size: 32px; color: var(--primary); margin: 0 0 15px 0;">C3, C4, R8, R9 结构解析</h3>
+                <p style="font-size: 24px;">该 RC 结构在电路中主要承担<span class="highlight">高频滤波</span>与<span class="highlight">信号完整性保障</span>任务：</p>
+            </div>
+            <div class="grid-layout">
+                <div class="tile">
+                    <h3><i class="fa-solid fa-filter"></i> 核心滤波作用</h3>
+                    <ul>
+                        <li>有效滤除开关切换瞬间产生的杂散高频噪声。</li>
+                        <li>平滑关键节点的电压波形，防止虚假逻辑触发。</li>
+                    </ul>
+                </div>
+                <div class="tile">
+                    <h3><i class="fa-solid fa-shield-halved"></i> 系统稳定性</h3>
+                    <ul>
+                        <li>防止高压脉冲环境下的 EMI 干扰进入控制环路。</li>
+                        <li>确保反馈信号真实性，提升闭环控制精度。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer">2 / 10</div>
+    </div>
+
+    <!-- Slide 3: 驱动难题 -->
+    <div class="slide-container" id="slide3">
+        <h2 class="slide-title"><i class="fa-solid fa-triangle-exclamation"></i> 2. 驱动难题：控制与功率的鸿沟</h2>
+        <div class="content-area">
+            <div class="full-width-card">
+                <p style="font-size: 28px; line-height: 1.8;">
+                    数字控制器输出信号属于<span class="highlight">弱电小信号</span>。在实际工程中，必须建立专门的驱动链条：
+                    <br><strong>信号整形 &rarr; 功率放大</strong>
+                </p>
+            </div>
+            <div class="grid-layout">
+                <div class="tile">
+                    <h3>控制端限制 (Weak)</h3>
+                    <ul>
+                        <li>输出电流仅约 4mA，无法驱动功率管。</li>
+                        <li>3.3V 电平不足以让 MOSFET 完全饱和导通。</li>
+                    </ul>
+                </div>
+                <div class="tile">
+                    <h3>驱动端需求 (Strong)</h3>
+                    <ul>
+                        <li>需要安培级瞬间电流克服栅极电容。</li>
+                        <li>需提升至 12V 驱动电平以降低导通损耗。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer">3 / 10</div>
+    </div>
+
+    <!-- Slide 4: SN74AUP1T97 功能 -->
+    <div class="slide-container" id="slide4">
+        <h2 class="slide-title"><i class="fa-solid fa-microchip"></i> SN74AUP1T97：信号整形与翻译</h2>
+        <div class="content-area">
+            <div class="grid-layout">
+                <div class="tile">
+                    <h3>电压翻译 (Translation)</h3>
+                    <p>将低压系统信号（如 1.8V）转换为稳定的 3.3V 逻辑信号，解决电平不匹配难题。</p>
+                </div>
+                <div class="tile">
+                    <h3>整形抗干扰 (Shaping)</h3>
+                    <p>集成施密特触发输入，抑制输入噪声，确保输出信号边缘陡峭、波形干净。</p>
+                </div>
+                <div class="tile" style="grid-column: span 2;">
+                    <h3>逻辑功能配置 (MUX)</h3>
+                    <p>本项目中配置为 <strong>2选1 数据选择器</strong>。根据 C 引脚电平灵活选通信号通道，实现硬件级的逻辑安全隔离。</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">4 / 10</div>
+    </div>
+
+    <!-- Slide 5: SN74 PLECS 实现 (文字加大) -->
+    <div class="slide-container" id="slide5">
+        <h2 class="slide-title"><i class="fa-solid fa-laptop-code"></i> SN74AUP1T97：PLECS 仿真实现</h2>
+        <div class="content-area">
+            <div class="full-width-card big-text">
+                <h3 style="font-size: 32px; margin-bottom: 20px;">建模逻辑与主要工作：</h3>
+                <ul>
+                    <li><strong>原理复现</strong>：参照手册内部电路，在仿真软件中利用逻辑门搭建了等效选通架构。</li>
+                    <li><strong>功能仿真</strong>：完整模拟了不同控制电平下的信号切换过程，验证了硬件选通逻辑的准确性。</li>
+                    <li><strong>性能评估</strong>：仿真显示模块能成功消除前级信号毛刺，输出标准 3.3V 逻辑方波。</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">5 / 10</div>
+    </div>
+
+    <!-- Slide 6: MCP14A0902 功能 -->
+    <div class="slide-container" id="slide6">
+        <h2 class="slide-title"><i class="fa-solid fa-gears"></i> MCP14A0902：高速栅极驱动器</h2>
+        <div class="content-area">
+            <div class="grid-layout">
+                <div class="tile">
+                    <h3>功率放大 (9A Peak)</h3>
+                    <p>将 3.3V 微弱逻辑信号转化为具备 <strong>9A 峰值电流</strong> 能力的 12V 强电流信号。</p>
+                </div>
+                <div class="tile">
+                    <h3>克服栅极电容</h3>
+                    <p>利用巨大瞬时能量为 MOSFET 极速充放电，实现纳秒级开关，大幅降低导通损耗。</p>
+                </div>
+                <div class="tile" style="grid-column: span 2;">
+                    <h3>非反相驱动特性</h3>
+                    <p>保证输出信号与输入逻辑相位完全一致：逻辑“高”对应 MOSFET “导通”，简化控制设计。</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">6 / 10</div>
+    </div>
+
+    <!-- Slide 7: MCP14 PLECS 实现 (文字加大) -->
+    <div class="slide-container" id="slide7">
+        <h2 class="slide-title"><i class="fa-solid fa-wave-square"></i> MCP14A0902：PLECS 仿真实现</h2>
+        <div class="content-area">
+            <div class="full-width-card big-text">
+                <h3 style="font-size: 32px; margin-bottom: 20px;">建模与集成工作：</h3>
+                <ul>
+                    <li><strong>仿真建模</strong>：用滞回比较器处理使能逻辑，结合传输延迟、乘法器电平映射及受控电压源转换来实现。</li>
+                    <li><strong>电平泵升验证</strong>：观测并确认了从 3.3V 逻辑向 12V 驱动电平的无损功率提升。</li>
+                    <li><strong>系统化集成</strong>：将驱动链条封装为统一模块，实现了从微弱逻辑到强力驱动的完整闭环。</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">7 / 10</div>
+    </div>
+
+    <!-- Slide 8: 栅极网络 R5, R10, D7 -->
+    <div class="slide-container" id="slide8">
+        <h2 class="slide-title"><i class="fa-solid fa-network-wired"></i> 栅极驱动网络：R5, R10, D7 分析</h2>
+        <div class="content-area">
+            <div class="full-width-card">
+                <p style="font-size: 26px; font-weight: bold;">非对称驱动速度控制设计：</p>
+            </div>
+            <div class="grid-layout">
+                <div class="tile">
+                    <h3><i class="fa-solid fa-arrow-up"></i> 开启过程 (慢开启)</h3>
+                    <p>电流流经电阻 R5。作用是限制开启速度，有效抑制 dv/dt 产生的电磁干扰（EMI）与电压震荡。</p>
+                </div>
+                <div class="tile">
+                    <h3><i class="fa-solid fa-arrow-down"></i> 关断过程 (快关断)</h3>
+                    <p>二极管 D7 导通，电荷通过小电阻 R10 快速泄放。作用是极速关断，降低开关损耗，防止温升过高。</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">8 / 10</div>
+    </div>
+
+    <!-- Slide 9: 总结 -->
+    <div class="slide-container" id="slide9">
+        <h2 class="slide-title"><i class="fa-solid fa-clipboard-check"></i> 设计结论与仿真总结</h2>
+        <div class="content-area">
+            <div class="full-width-card" style="border-left-color: #27ae60;">
+                <h3 style="color: #27ae60; font-size: 30px; margin-top: 0;">工程可行性验证通过：</h3>
+                <ul style="font-size: 24px;">
+                    <li><span class="highlight">驱动链条完整</span>：验证了逻辑整形、电压翻译与功率放大的完整拓扑。</li>
+                    <li><span class="highlight">波形质量优异</span>：滤波电路与非对称驱动配合，解决了信号噪声与过冲问题。</li>
+                    <li><span class="highlight">能力裕度充足</span>：仿真确认12V 峰值驱动能力完全覆盖主功率管需求。</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">9 / 10</div>
+    </div>
+
+    <!-- Slide 10: 结语 -->
+    <div class="slide-container title-slide" id="slide10">
+        <h1>汇报完毕</h1>
+        <p style="font-size: 32px; margin-top: 30px; opacity: 0.8;">感谢各位老师的指导与点评！</p>
+        <div class="footer">10 / 10</div>
+    </div>
+
+    <div class="nav-hint">使用方向键 &larr; &rarr; 或 点击 切换幻灯片</div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide-container');
+        const progressBar = document.getElementById('progressBar');
+
+        function showSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            
+            // 更新进度条
+            const progress = ((currentSlide + 1) / slides.length) * 100;
+            progressBar.style.width = progress + '%';
+        }
+
+        // 键盘控制
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
+                showSlide(currentSlide + 1);
+            } else if (e.key === 'ArrowLeft') {
+                showSlide(currentSlide - 1);
+            }
+        });
+
+        // 点击幻灯片换页
+        document.body.addEventListener('click', () => {
+            showSlide(currentSlide + 1);
+        });
+
+        // 初始化
+        showSlide(0);
+    </script>
+</body>
+</html>

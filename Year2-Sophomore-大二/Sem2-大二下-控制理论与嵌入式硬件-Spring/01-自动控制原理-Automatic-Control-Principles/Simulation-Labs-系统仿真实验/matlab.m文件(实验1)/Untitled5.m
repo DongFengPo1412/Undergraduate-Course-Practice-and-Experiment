@@ -1,0 +1,10 @@
+x=[0:2*pi/9:2*pi];
+disp('使用冒号生成法的结果：');
+disp(x);
+disp(['size:',mat2str(size(x))]);
+disp(['length:',num2str(length(x))]);
+y=linspace(0,2*pi,10);
+disp('使用linspace生成法的结果：');
+disp(y);
+disp(['size:',mat2str(size(y))]);
+disp(['length:',num2str(length(y))]);

@@ -1,0 +1,5 @@
+../Core/Src/myflash.c:21:10:stmflash_read_halfword	1
+../Core/Src/myflash.c:33:6:stmflash_read	2
+../Core/Src/myflash.c:52:6:stmflash_write_nocheck	2
+../Core/Src/myflash.c:74:6:stmflash_write	10
+../Core/Src/myflash.c:162:6:test_write	1

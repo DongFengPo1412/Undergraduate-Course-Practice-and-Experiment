@@ -1,0 +1,12 @@
+z=[-4,-5];
+p=[-1,-2,-3];
+k=2;
+Z=zpk(z,p,k);
+disp('零极点模型 G(zpk) 为:');
+disp(Z);
+G=tf(Z);
+disp('传递函数模型 G(s) 为:');
+disp(G);
+S=ss(Z);
+disp('状态空间模型 G(ss) 为:');
+disp(S);

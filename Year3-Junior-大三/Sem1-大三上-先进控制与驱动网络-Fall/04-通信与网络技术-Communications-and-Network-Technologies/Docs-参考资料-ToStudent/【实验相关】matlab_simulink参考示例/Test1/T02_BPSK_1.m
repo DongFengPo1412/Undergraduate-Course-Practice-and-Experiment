@@ -1,0 +1,12 @@
+clear;
+t = 0:0.001:5;
+s1 = cos(2*pi*t);
+s2 = cos(2*pi*t + pi);
+subplot(2,1,1);
+plot(s1);
+title('cos(\omega_ct) -- 0','fontname','Times New Roman', 'Color','b','FontSize',14);
+axis([0 5000 -1 1]);
+subplot(2,1,2);
+plot(s2);
+axis([0 5000 -1 1]);
+title('cos(\omega_ct+\pi) -- 1','fontname','Times New Roman', 'Color','b','FontSize',14);

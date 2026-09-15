@@ -1,0 +1,56 @@
+# OS and Editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.ipynb_checkpoints/
+.venv/
+env/
+
+# Vivado / EDA Artifacts
+*.jou
+*.log
+*.str
+*.backup
+.Xil/
+xsim.dir/
+*.sim/
+*.cache/
+*.ip_user_files/
+*.hw/
+*.runs/
+*.btree
+
+# Keil / ARM / IAR Artifacts
+*.o
+*.d
+*.crf
+*.lnp
+*.lst
+*.map
+*.dep
+*.htm
+*.build_log.htm
+*.uvgui.*
+*.uvguix.*
+*.bak
+*.orig
+
+# MATLAB
+*.asv
+
+# Large Media & Archives
+*.mp4
+*.avi
+*.mov
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz

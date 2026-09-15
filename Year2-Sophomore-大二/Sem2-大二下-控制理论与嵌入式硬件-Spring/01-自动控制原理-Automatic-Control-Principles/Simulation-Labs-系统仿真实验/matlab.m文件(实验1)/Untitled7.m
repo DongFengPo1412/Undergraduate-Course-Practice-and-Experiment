@@ -1,0 +1,13 @@
+t=[0:0.1:4*pi];
+x1=10*sin(t);
+plot(t,x1,'r+-');
+xlim([0,4*pi]);
+ylim([-12,12]);
+xticks(0:pi:4*pi);
+yticks(-10:5:10);
+axis equal;
+grid on;
+xlabel('时间t');
+ylabel('函数 x1=10sint');
+title('x1=10sint 曲线图');
+text(pi,10,'峰值点','FontSize',10);

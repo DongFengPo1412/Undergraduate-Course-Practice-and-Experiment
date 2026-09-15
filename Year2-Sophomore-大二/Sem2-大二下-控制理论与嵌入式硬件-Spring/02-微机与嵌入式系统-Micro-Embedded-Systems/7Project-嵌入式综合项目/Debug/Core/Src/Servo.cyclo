@@ -1,0 +1,2 @@
+../Core/Src/Servo.c:5:6:Servo_Init	1
+../Core/Src/Servo.c:12:6:ControlServo	1

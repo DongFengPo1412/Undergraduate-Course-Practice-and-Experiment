@@ -1,0 +1,10 @@
+# STM32CubeIDE / Eclipse
+.settings/
+.vscode/
+Debug/
+Release/
+bin/
+obj/
+
+# MS Office / Word Temporary files
+~$*

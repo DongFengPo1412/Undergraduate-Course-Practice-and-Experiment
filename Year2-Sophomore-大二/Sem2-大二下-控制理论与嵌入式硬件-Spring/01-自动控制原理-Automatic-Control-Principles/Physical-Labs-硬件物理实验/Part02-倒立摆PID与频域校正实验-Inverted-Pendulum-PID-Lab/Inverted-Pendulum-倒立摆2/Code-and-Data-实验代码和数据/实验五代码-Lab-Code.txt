@@ -1,0 +1,32 @@
+clear all, close all;
+
+%%校正前系统
+num = [2.9586];
+den = [1 0 -28.9941];
+G0 = tf(num,den);%开环G0
+rlocus(G0);
+
+%%基于根轨迹法 选定PID控制器参数
+dzeros = [-6+j*6,-6-j*6];%选取零点
+numGc1=poly(dzeros);
+Gc1=tf(poly(dzeros),[1,0]);
+
+rlocus(Gc1*G0);
+sgrid;
+[kfind,poles]=rlocfind(Gc1*G0);
+
+Kd=kfind;
+Kp=numGc1(2)*Kd;
+Ki=numGc1(3)*Kd;
+s=tf('s');
+Gc1=Kp+Ki/s+Kd*s;
+
+%%校正后系统
+SysClose=feedback(Gc1*G0,1,-1);
+[numS denS]=tfdata(SysClose,'v');
+poleSClose=roots(denS);
+figure(2);
+impulse(SysClose,2);
+grid on;
+
+

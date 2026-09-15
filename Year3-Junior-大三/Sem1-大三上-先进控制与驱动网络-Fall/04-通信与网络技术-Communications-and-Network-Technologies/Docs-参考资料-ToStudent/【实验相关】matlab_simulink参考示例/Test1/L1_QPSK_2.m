@@ -1,0 +1,11 @@
+clear;
+close all;
+EbN0_all = -10:2:10;
+snr_EbN0 = 10.^(EbN0_all/10);
+ber_bpsk = erfc(sqrt(snr_EbN0))/2;
+ser_qpsk = erfc(sqrt(snr_EbN0)).*(1-erfc(sqrt(snr_EbN0))/4);
+semilogy(EbN0_all,ber_bpsk,'-ko',EbN0_all,ser_qpsk,'-k*');
+grid on;
+title('BPSK和QPSK调制信号在AWGN信道下的性能');
+xlabel('Eb/N0');ylabel('误比特率和误符号率');
+legend('BPSK误比特率','QPSK误符号率');

@@ -1,0 +1,7 @@
+../Core/Src/main.c:77:5:main	24	static
+../Core/Src/main.c:595:6:SystemClock_Config	72	static
+../Core/Src/main.c:636:6:Error_Handler	4	static
+../Core/Src/main.c:664:6:Read_Card_Flash	16	static
+../Core/Src/main.c:690:5:press_FR	24	static
+../Core/Src/main.c:741:6:Del_FR	8	static
+../Core/Src/main.c:748:6:Add_Card_Flash	16	static

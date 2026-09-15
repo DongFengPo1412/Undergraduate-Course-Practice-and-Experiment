@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Liu\\source\\repos\\\u8BA1\u7B97\u673A\u8F6F\u4EF6\u57FA\u7840-\u5B9E\u9A8C-4\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A679F9E0-6B56-4861-8076-025C77654FC1}|\u8BA1\u7B97\u673A\u8F6F\u4EF6\u57FA\u7840-\u5B9E\u9A8C-4.vcxproj|C:\\Users\\Liu\\source\\repos\\\u8BA1\u7B97\u673A\u8F6F\u4EF6\u57FA\u7840-\u5B9E\u9A8C-4\\\u5FAA\u73AF\u961F\u5217.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A679F9E0-6B56-4861-8076-025C77654FC1}|\u8BA1\u7B97\u673A\u8F6F\u4EF6\u57FA\u7840-\u5B9E\u9A8C-4.vcxproj|solutionrelative:\u5FAA\u73AF\u961F\u5217.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A679F9E0-6B56-4861-8076-025C77654FC1}|\u8BA1\u7B97\u673A\u8F6F\u4EF6\u57FA\u7840-\u5B9E\u9A8C-4.vcxproj|C:\\Users\\Liu\\source\\repos\\\u8BA1\u7B97\u673A\u8F6F\u4EF6\u57FA\u7840-\u5B9E\u9A8C-4\\\u94FE\u961F\u5217.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A679F9E0-6B56-4861-8076-025C77654FC1}|\u8BA1\u7B97\u673A\u8F6F\u4EF6\u57FA\u7840-\u5B9E\u9A8C-4.vcxproj|solutionrelative:\u94FE\u961F\u5217.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "\u5FAA\u73AF\u961F\u5217.c",
+              "DocumentMoniker": "C:\\Users\\Liu\\source\\repos\\\u8BA1\u7B97\u673A\u8F6F\u4EF6\u57FA\u7840-\u5B9E\u9A8C-4\\\u5FAA\u73AF\u961F\u5217.c",
+              "RelativeDocumentMoniker": "\u5FAA\u73AF\u961F\u5217.c",
+              "ToolTip": "C:\\Users\\Liu\\source\\repos\\\u8BA1\u7B97\u673A\u8F6F\u4EF6\u57FA\u7840-\u5B9E\u9A8C-4\\\u5FAA\u73AF\u961F\u5217.c",
+              "RelativeToolTip": "\u5FAA\u73AF\u961F\u5217.c",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGoAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-11-24T10:22:10.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "\u94FE\u961F\u5217.c",
+              "DocumentMoniker": "C:\\Users\\Liu\\source\\repos\\\u8BA1\u7B97\u673A\u8F6F\u4EF6\u57FA\u7840-\u5B9E\u9A8C-4\\\u94FE\u961F\u5217.c",
+              "RelativeDocumentMoniker": "\u94FE\u961F\u5217.c",
+              "ToolTip": "C:\\Users\\Liu\\source\\repos\\\u8BA1\u7B97\u673A\u8F6F\u4EF6\u57FA\u7840-\u5B9E\u9A8C-4\\\u94FE\u961F\u5217.c",
+              "RelativeToolTip": "\u94FE\u961F\u5217.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-11-24T10:22:25.529Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

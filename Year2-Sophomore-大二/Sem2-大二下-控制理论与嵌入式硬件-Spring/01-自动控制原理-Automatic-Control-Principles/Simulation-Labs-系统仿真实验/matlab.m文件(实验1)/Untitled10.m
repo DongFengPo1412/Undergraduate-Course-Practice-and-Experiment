@@ -1,0 +1,12 @@
+G_num=[5 12];
+G_den=conv([1 0.5],[1 10]);
+G=tf(G_num,G_den);
+H_num=[1 3];
+H_den=[1 7 5];
+H=tf(H_num,H_den);
+GH=series(G,H);
+T=feedback(G,H);
+disp('开环传递函数G(s)*H(s):');
+disp(GH);
+disp('闭环传递函数T(s):');
+disp(T);

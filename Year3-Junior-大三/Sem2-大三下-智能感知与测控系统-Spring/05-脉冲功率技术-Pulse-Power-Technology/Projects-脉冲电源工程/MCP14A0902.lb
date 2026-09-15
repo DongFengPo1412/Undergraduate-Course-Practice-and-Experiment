@@ -1,0 +1,147 @@
+*******************************************************************************
+* Software License Agreement                                                  *
+*                                                                             *
+* © [2024] Microchip Technology Inc. and its subsidiaries                     *
+*                                                                             *
+* Subject to your compliance with the terms and conditions of the license     *
+* agreement accompanying this software, you may use this Microchip software   *
+* and any derivatives exclusively with Microchip products.                    *
+* You are responsible for complying with third party license terms applicable *
+* to your use of third party software (including open source software) that   *
+* may accompany this Microchip software. SOFTWARE IS "AS IS" NO WARRANTIES,   *
+* WHETHER EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING    *
+* ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, OR FITNESS FOR *
+* A PARTICULAR PURPOSE. IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY          *
+* INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST *
+* OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED,  *
+* EVEN IF MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE    *
+* FORESEEABLE. TO THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL        *
+* LIABILITY ON ALL CLAIMS RELATED TO THE SOFTWARE WILL NOT EXCEED AMOUNT OF   *
+* FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.             *
+*******************************************************************************
+
+.SUBCKT MCP14A0902 1 2 3 4 5
+*                  | | | | |
+*                  | | | | Enable
+*                  | | | Negative Supply
+*                  | | Positive Supply
+*                  | Output
+*                  Input
+*
+
+R_R1  4    1    100MEG
+C_C1  4    1    1.00P
+G_G3  3    1    TABLE { V(3, 1) } ((-330M,-100U)(-300M,-1.00U)(-270M,-1.00N)(0,0)(20.0,1.00N))
+G_G4  1    4    TABLE { V(1, 4) } ((-330M,100U)(-300M,1.00U)(-270M,-1.00N)(0,0)(20.0,1.00N))	
+G_G11 30   0    TABLE { V(113, 0) } ( (0,10n)(0.1,0)(0.5,-0.5)(0.9,-1)(1,-1) )
+G_G12 30   0    TABLE {V(123,0)} ( (0,1)(0.1,1)(0.5,0.5)(0.9,0)(1,-10n) )
+G_G21 0    11   TABLE { V(3, 4) } ((0,1.6)(4.5,1.525)(6.00,1.535)(10.0,1.545)(14.0,1.555)(18.0,1.595))
+G_G22 0    12   TABLE { V(3, 4) } ((0,1.29)(4.5,1.33)(6.00,1.31)(10.0,1.31)(14.0,1.31)(18.0,1.32))
+R_R21 0    11   1 TC 0.00 0.00
+R_R22 0    12   1 TC 0.00  0.00
+C_C30 30   0    1n  
+G_G31 0    31   TABLE { V(3, 4) } ((0,102)(4.5,50.0)(6.00,27.1)(10.0,20.1)(14.0,19.3)(18.0,17.5))
+R_R31 31   0    1.0 TC 5.0M  5.98U
+G_G33 0    30   TABLE { V(31, 30) } ( (-1M,-10)(0,0)(1,100N) )
+X_S31 31 30 31 30 MCP14A0902_S31
+G_G32 32   0    TABLE { V(3, 4) } ((0,110)(4.5,52.0)(6.00,44.8)(10.0,25)(14.0,21.8)(18.0,20.9))
+R_R32 0    32   1.0 TC 4.3M  -25.07U
+G_G34 30   0    TABLE { V(30, 32) } ( (-1M,-10)(0,0)(1,100N) )
+R_R30 32   30   1MEG  
+G_G51 0    50   TABLE { V(30, 0) } ( (-5,-1U)(-3,-1U)(0,0)(1m,8.95)(18,9.04) )
+G_G52 50   0    TABLE { V(0, 30) } ( (-5,-1U)(-3,-1U)(0,0)(1m,9.95)(18,10.0) )
+R_R53 0    50   1
+E_G50X 51X   0  TABLE { V(3,4) } (0,0)(4.5,0.30)(6,0.49)(8,0.9)(10,1.15)(12,1.4)(14,1.7)(16,2.1)(18,2.4)
+G_G50  51 60   VALUE {V(51X,0)*V(50,0)/3 }
+R_R51 51    0   1  
+G_G53  3    0   TABLE {V(51,0)} ((-100,100)(0,0)(1,1n))  
+G_G54  0    4   TABLE {V(0,51)} ((-100,100)(0,0)(1,1n))  
+R_R60 0    60   100MEG  
+X_H67 60 59 0 69 MCP14A0902_H67
+C_C60 561  60   200P
+R_R59 59   2    1.26
+L_L59 59   2    1.00N
+R_RC60 56 561 1m
+X_H60 56 0 58 0 MCP14A0902_H60
+G_G60P 0 3 TABLE { V(58, 0) } ((-1,-1n)(0,0)(.285,-1n)(1.488,-1.1n)
+G_G60N 4 0 TABLE { V(0, 58) } ((-1,-1n)(0,0)(.285,-1n)(1.488,-1.1n)
+E_E67 67   0    TABLE { V(69, 0) } ( (-9.00,-9.00)(0,0)(1,2.00) )
+G_G63 0    63   POLY(1) 3 4 1.95 -140M 3.60M
+R_R63 0    63   1 TC 3.26M 936N
+E_E61 61   65   VALUE {V(67,0)*V(63,0)}
+V_V63 65   3    1.00U
+G_G61 61   60   TABLE { V(61, 60) } ((-200U,-900)(-150U,-450)(-100U,-90.0)(0,0)(10,1N))
+E_E68 68   0    TABLE { V(69, 0) }  ( (-1,-2.00)(0,0)(10.0,10.0) )
+G_G64 0    64   POLY(1) 3 4 1.07 -70.2M 1.80M
+R_R64 0    64   1 TC 3.44M 1.88U
+E_E62 62   66   VALUE {V(68,0)*V(64,0)}
+V_V64 66   4    1.00U
+G_G62 60   62   TABLE { V(60, 62) } ((-200U,-1.00K)(-150U,-500)(-100U,-100)(0,0)(10,1N))
+G_G55 0    155  TABLE { V(3, 4) } ((0,0)(4.5,325U)(5.00,330U)(8.0,335U)(10.0,345U)(15.0, 360U)(18.0,377U))
+R_R55 155  0    1 TC  2.50M -3.64U
+G_G57 0    157  TABLE { V(3, 4) } ((0,0)(4.5,325U)(5.00,330U)(8.0,335U)(10.0,345U)(15.0, 360U)(18.0,377U))
+R_R57 157  0    1 TC  2.50M -3.64U
+G_G67 0    156  TABLE { V(3, 4) } ((0,0)(4.5,325U)(5.00,330U)(8.0,335U)(10.0,345U)(15.0, 360U)(18.0,377U))
+R_R68 156  0    1 TC  2.50M -3.64U
+X_U10 11   12 159 ANALOG_DIFF
+X_U11          1 158 159 160 COMP_HYS  PARAMS:  T=10
+X_U12          5 158 159 161 COMP_HYS  PARAMS:  T=10
+X_U13          160 161 164 AND
+X_U15          160 161 163 XOR
+X_U16          160 161 162 NOR
+G_ABM2I1       333 4 VALUE { (V(155) * V(162))    }
+G_ABM2I2       333 4 VALUE { (V(156) * V(163))    }
+G_ABM2I3       333 4 VALUE { (V(157) * V(164))    }
+R_R69 333    3   0.001
+E_ABM1         158 0 VALUE { ( V(11) +V(12) ) / 2.0   }
+X_U3 111 112 113 AND
+X_U5 121 122 123 AND
+X_U6 1 11 111 COMPARATOR
+X_U7 5 11 112 COMPARATOR
+X_U8 1 12 121 COMPARATOR
+X_U9 5 12 122 COMPARATOR
+G_G65 3    5    TABLE { V(3, 5) } ((-330M,-100U)(-300M,-1.00U)(-270M,-1.00N)(0,0)(20.0,1.00N))
+G_G66 5    4    TABLE { V(5, 4) } ((-330M,100U)(-300M,1.00U)(-270M,-1.00N)(0,0)(20.0,1.00N))
+R_R65  4    5    100MEG
+C_C61  4    5    1.00P
+R_R66  5    335    1.8MEG
+E_E69  335 4 3 4 1
+
+.SUBCKT MCP14A0902_S31 1 2 3 4 
+S_S31         3 4 1 2 _S31
+RS_S31         1 2 1G
+.MODEL         _S31 VSWITCH Roff=100MEG Ron=1k Voff=0.2V Von=0.1V
+.ends MCP14A0902_S31
+.SUBCKT MCP14A0902_H60 1 2 3 4
+H_H60         3 4 VH_H60 1
+VH_H60         1 2 0V
+.ends MCP14A0902_H60
+.SUBCKT MCP14A0902_H67 1 2 3 4
+H_H67         3 4 VH_H67 1
+VH_H67         1 2 0V
+.ends MCP14A0902_H67
+.SUBCKT COMPARATOR INP INM OUT  
+EOUT OUT 0 VALUE { IF( V(INP)>V(INM),1,0) }
+.ends COMPARATOR
+.SUBCKT AND A B OUT 
+EOUT OUT 0 VALUE { IF( V(A)>0.5 & V(B)>0.5,1,0) }
+.ends AND
+.SUBCKT ANALOG_DIFF IN1 IN2 OUT
+EOUT OUT 0 VALUE { V(IN1)-V(IN2)}
+.ends ANALOG_DIFF
+.SUBCKT COMP_HYS INP INM HYS OUT PARAMs: T=10
+EIN INP1 INM1 INP INM 1
+EHYS INP1 INP2 VALUE { IF( V(1)>0.5,-V(HYS)/2,V(HYS)/2) }
+EOUT OUT 0 VALUE { IF( V(INP2)>V(INM1),1,0) }
+R1 OUT 1 1
+C1 1 0 {T*1e-9}
+RINP1 INP1 0 1K
+.ends COMP_HYS
+.SUBCKT NOR A B OUT
+EOUT OUT 0 VALUE { IF( V(A)>0.5 | V(B)>0.5,0,1) }
+.ends NOR
+.SUBCKT XOR A B OUT
+EOUT OUT 0 VALUE { IF( (V(A)>0.5 & V(B)<0.5) | (V(A)<0.5 & V(B)>0.5),1,0) }
+.ends XOR
+
+.ENDS MCP14A0902

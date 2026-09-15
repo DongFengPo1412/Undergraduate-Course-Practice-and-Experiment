@@ -1,0 +1,11 @@
+num=[4 1];
+den=[1 1 1 2 1];
+G=tf(num,den);
+disp('传递函数 G(s) 为:');
+disp(G);
+Z=zpk(G);
+disp('零极点模型 G(zpk) 为:');
+disp(Z);
+S=ss(G);
+disp('状态空间模型 G(ss) 为:');
+disp(S);

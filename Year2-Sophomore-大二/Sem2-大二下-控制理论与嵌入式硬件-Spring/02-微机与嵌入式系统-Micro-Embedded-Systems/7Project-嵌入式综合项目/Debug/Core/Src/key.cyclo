@@ -1,0 +1,2 @@
+../Core/Src/key.c:3:6:Key_Init	1
+../Core/Src/key.c:15:9:Key_Scan	13

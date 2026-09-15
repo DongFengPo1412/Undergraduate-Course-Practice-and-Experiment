@@ -1,0 +1,500 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高压反激变换器工程化建模汇报</title>
+    <!-- MathJax for high-quality mathematical notation -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --bg-color: #f0f2f5;
+            --slide-bg: #ffffff;
+            --primary-color: #003366; /* 工程深蓝 */
+            --accent-color: #b71c1c; /* 重点红 */
+            --light-blue: #4da6ff;   /* 装饰蓝 */
+            --text-color: #333333;
+            --gray-text: #666666;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        #presentation {
+            width: 1280px;
+            height: 720px;
+            background-color: var(--slide-bg);
+            position: relative;
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+            overflow: hidden;
+        }
+
+        .slide-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            padding: 60px 80px;
+            flex-direction: column;
+            justify-content: flex-start;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            background: white;
+            z-index: 0;
+        }
+
+        .slide-container.active {
+            display: flex;
+            opacity: 1;
+            z-index: 10;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        .slide-title {
+            font-size: 48px;
+            margin-bottom: 25px;
+            border-bottom: 4px solid var(--primary-color);
+            padding-bottom: 15px;
+            width: fit-content;
+            max-width: 900px;
+        }
+
+        .content-area {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            width: 100%;
+            align-items: center;
+        }
+
+        .math-card {
+            background: #f8f9fa;
+            border-left: 8px solid var(--primary-color);
+            padding: 20px 30px;
+            margin: 15px 0;
+            font-size: 24px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        ul {
+            font-size: 24px;
+            line-height: 1.5;
+            color: var(--text-color);
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* 封面样式 */
+        .cover-layout {
+            padding: 0 !important;
+            flex-direction: row !important;
+            align-items: stretch;
+        }
+
+        .cover-left {
+            width: 55%;
+            background-color: #fff;
+            background-image: 
+                linear-gradient(rgba(0, 51, 102, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 51, 102, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 80px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .cover-left h1 {
+            font-size: 64px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            border: none;
+        }
+
+        .cover-left .subtitle {
+            font-size: 26px;
+            color: #555;
+            border-left: 6px solid var(--accent-color);
+            padding-left: 20px;
+            line-height: 1.6;
+        }
+
+        .cover-right {
+            width: 45%;
+            background: linear-gradient(135deg, #003366 0%, #004080 100%);
+            transform: skewX(-10deg) translateX(80px);
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 0 120px 100px 0;
+            color: white;
+            box-shadow: -10px 0 30px rgba(0,0,0,0.2);
+        }
+
+        .cover-right-content {
+            transform: skewX(10deg);
+            text-align: right;
+        }
+
+        .cover-right .name {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .cover-right .label {
+            font-size: 18px;
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* 分栏与卡片 */
+        .tiled-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            width: 100%;
+        }
+
+        .tile {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .tile .icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        /* 进度条 */
+        .progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 6px;
+            background: var(--light-blue);
+            z-index: 100;
+            transition: width 0.3s;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            color: var(--gray-text);
+            font-size: 16px;
+            z-index: 50;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 22px;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: var(--primary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div id="presentation">
+    
+    <!-- Slide 1: Cover -->
+    <div class="slide-container active cover-layout" id="slide1">
+        <div class="cover-left">
+            <h1>高压反激变换器<br>工程建模汇报</h1>
+            <div class="subtitle">
+                从理想化模型向<br>
+                物理级实物模型的演进
+            </div>
+        </div>
+        <div class="cover-right">
+            <div class="cover-right-content">
+                <p class="label">汇报人</p>
+                <p class="name">刘超然</p>
+                <p class="label">2025年12月25日</p>
+            </div>
+        </div>
+        <div class="footer">1 / 9</div>
+    </div>
+
+    <!-- Slide 2: Ideal vs Engineering -->
+    <div class="slide-container" id="slide2">
+        <h2 class="slide-title">1. 理想 vs. 工程级模型对照</h2>
+        <div class="content-area">
+            <div class="two-column">
+                <div style="background:#fff5f5; padding:20px; border-radius:10px;">
+                    <h3 class="highlight">理想模型</h3>
+                    <ul>
+                        <li>变压器：无损耦合 </li>
+                        <li>开关管：无阻导通 (\(R_{on}=0\))</li>
+                        <li>电容器：纯电容无内阻</li>
+                        <li>控制：无电流采样，开环运行</li>
+                    </ul>
+                </div>
+                <div style="background:#f5faff; padding:20px; border-radius:10px;">
+                    <h3 style="color:#003366">工程模型</h3>
+                    <ul>
+                        <li><span class="highlight">引入漏感</span>：模拟磁通泄露及尖峰</li>
+                        <li><span class="highlight">保护电路</span>：添加 RCD 吸收支路</li>
+                        <li><span class="highlight">寄生参数</span>：加入 ESR、Ron 与 Rg</li>
+                        <li><span class="highlight">采样反馈</span>：加入 R6 电流检测</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer">2 / 9</div>
+    </div>
+
+    <!-- Slide 3: Transformer Leakage -->
+    <div class="slide-container" id="slide3">
+        <h2 class="slide-title">2. 变压器真实化：漏感建模</h2>
+        <div class="content-area">
+            <ul>
+                <li><strong>定义</strong>：在原边串联 L1、副边串联 L2，模拟未完全耦合的磁通。</li>
+                <li><strong>参数计算逻辑</strong>：基于励磁电感 Lp 的 1%~3%提取。</li>
+            </ul>
+            <div class="math-card">
+                \[ L_p = 3\mu H, \quad k_{leak} = 2\% \]
+                \[ L_{leak} = 3\mu H \times 0.02 = 60nH \]
+            </div>
+            <p class="highlight">物理意义：反映了开关管关断瞬态的感生电动势 \(V = L_{leak} \frac{di}{dt}\)，是电路尖峰的物理来源。</p>
+        </div>
+        <div class="footer">3 / 9</div>
+    </div>
+
+    <!-- Slide 4: RCD Snubber -->
+    <div class="slide-container" id="slide4">
+        <h2 class="slide-title">3. 核心防护：RCD 吸收电路</h2>
+        <div class="content-area">
+            <div class="two-column">
+                <div>
+                    <ul>
+                        <li><strong>目的</strong>：吸收漏感释放的能量，钳位 MOSFET 漏极电压，防止电压过应力击穿。</li>
+                        <li><strong>关键参数</strong>：
+                            <br> \(C_2 = 220nF\)：电荷缓冲
+                            <br> \(R_3 = 1.2k\Omega\)：能量耗散
+                            <br> \(D_6\)：快恢复二极管
+                        </li>
+                    </ul>
+                </div>
+                <div style="background:#f8f9fa; padding:20px; border-radius:10px; border:1px solid #ddd;">
+                                        <p style="font-size:18px; color:#666; text-align:center;"></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">4 / 9</div>
+    </div>
+
+    <!-- Slide 5: Parasitic Parameters -->
+    <div class="slide-container" id="slide5">
+        <h2 class="slide-title">4. 物理特性补充：寄生参数</h2>
+        <div class="content-area">
+            <div class="tiled-content">
+                <div class="tile">
+                    <div class="icon">🔋</div>
+                    <h3>电容 ESR (R4)</h3>
+                    <p>设置 0.1Ω。模拟电解电容在高频下的内阻，产生真实的输出电压纹波 (Ripple)。</p>
+                </div>
+                <div class="tile">
+                    <div class="icon">🔌</div>
+                    <h3>开关管 Ron</h3>
+                    <p>设置 0.02Ω。模拟实物导通压降，使仿真效率数据具备参考价值。</p>
+                </div>
+                <div class="tile">
+                    <div class="icon">📉</div>
+                    <h3>栅极电阻 Rg</h3>
+                    <p>设置 22Ω。控制开关斜率，抑制 PSpice 仿真中的高频寄生震荡。</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">5 / 9</div>
+    </div>
+
+    <!-- Slide 6: Current Sampling -->
+    <div class="slide-container" id="slide6">
+        <h2 class="slide-title">5. 闭环基础：电流采样电阻 R6</h2>
+        <div class="content-area">
+            <ul>
+                <li><strong>设置位置</strong>：MOSFET 源极（Source）对地。</li>
+                <li><strong>物理作用</strong>：监测原边峰值电流，提供限流反馈。</li>
+            </ul>
+            <div class="math-card">
+                \[ V_{sense} = I_{peak} \times R_6 \]
+            </div>
+            <ul>
+                <li><strong>解决问题</strong>：有效消除了电路在 CCM 模式下的“累积效应”，使电压在 450V 后的升压过程平滑线性，避免了开环状态下的斜率突变。</li>
+            </ul>
+        </div>
+        <div class="footer">6 / 9</div>
+    </div>
+
+    <!-- Slide 7: Parameter Summary -->
+    <div class="slide-container" id="slide7">
+        <h2 class="slide-title">参数设置汇总表 (工程级)</h2>
+        <div class="content-area">
+            <table>
+                <thead>
+                    <tr>
+                        <th>元件</th>
+                        <th>工程建议值</th>
+                        <th>物理作用</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>原边漏感 Lleak</td>
+                        <td>60nH</td>
+                        <td>模拟磁通泄露带来的尖峰电压</td>
+                    </tr>
+                    <tr>
+                        <td>RCD 电阻 R3</td>
+                        <td>1.2kΩ</td>
+                        <td>消耗漏感能量，钳位 FET 电压</td>
+                    </tr>
+                    <tr>
+                        <td>电容 ESR R4</td>
+                        <td>0.1Ω</td>
+                        <td>模拟实物电容波形纹波</td>
+                    </tr>
+                    <tr>
+                        <td>采样电阻 R6</td>
+                        <td>0.05Ω</td>
+                        <td>实现峰值电流限制控制</td>
+                    </tr>
+                    <tr>
+                        <td>栅极电阻 Rg</td>
+                        <td>22Ω</td>
+                        <td>控制开关速度，消除高频震荡</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="footer">7 / 9</div>
+    </div>
+
+    <!-- Slide 8: Full Bridge Optimization -->
+    <div class="slide-container" id="slide8">
+        <h2 class="slide-title">6. 全桥逆变电路优化展望</h2>
+        <div class="content-area">
+            <div class="two-column">
+                <div style="background:#eef2f7; padding:20px; border-radius:10px;">
+                    <h3 style="font-size:26px;">1. 死区时间 (Dead-time)</h3>
+                    <p>设置 \(1\mu s \sim 2\mu s\)。防止同一桥臂上下管由于关断延迟导致“直通”炸管。</p>
+                </div>
+                <div style="background:#eef2f7; padding:20px; border-radius:10px;">
+                    <h3 style="font-size:26px;">2. 隔离驱动</h3>
+                    <p>采用自举 (Bootstrap) 或隔离电源。解决高位 IGBT 发射极电位浮动导致的开启难题。</p>
+                </div>
+            </div>
+            <div style="margin-top:30px; background:#fff3f3; padding:20px; border-radius:10px; border:1px solid #ffcccc;">
+                <h3 class="highlight">3. 输出 LC 滤波器</h3>
+                <p>利用微亨（μH）级别的电感来限制放电瞬间的电流上升率（di/dt），在保护 IGBT 器件的同时，确保 2200V 脉冲的上升沿足够陡峭，以满足医疗器械对能量释放密度的要求。</p>
+            </div>
+        </div>
+        <div class="footer">8 / 9</div>
+    </div>
+
+    <!-- Slide 9: Ending -->
+    <div class="slide-container" style="text-align:center; justify-content:center;" id="slide10">
+        <h1 style="font-size:80px; border:none;">汇报完毕</h1>
+        <p style="font-size:32px; color:#666; margin-top:20px;">感谢聆听！</p>
+        <p style="font-size:20px; color:#999; margin-top:50px;">Engineering Simulation Group | 2025</p>
+        <div class="footer">9/ 9</div>
+    </div>
+
+    <div class="progress-bar" id="progressBar"></div>
+
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide-container');
+    const progressBar = document.getElementById('progressBar');
+
+    function showSlide(index) {
+        if (index < 0) index = 0;
+        if (index >= slides.length) index = slides.length - 1;
+
+        slides[currentSlide].classList.remove('active');
+        slides[index].classList.add('active');
+        currentSlide = index;
+
+        const progress = ((currentSlide + 1) / slides.length) * 100;
+        progressBar.style.width = progress + '%';
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
+            showSlide(currentSlide + 1);
+        } else if (e.key === 'ArrowLeft') {
+            showSlide(currentSlide - 1);
+        }
+    });
+
+    document.getElementById('presentation').addEventListener('click', (e) => {
+        if (e.target.tagName !== 'IMG' && e.target.tagName !== 'BUTTON') {
+            showSlide(currentSlide + 1);
+        }
+    });
+</script>
+
+</body>
+</html>
