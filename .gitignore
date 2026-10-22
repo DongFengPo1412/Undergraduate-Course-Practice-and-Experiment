@@ -54,3 +54,12 @@ xsim.dir/
 *.7z
 *.tar
 *.gz
+
+# Visual Studio indexes and verified native build intermediates
+.vs/
+*.ipch
+*.vsidx
+*.tlog
+*.obj
+*.ilk
+*.pdb

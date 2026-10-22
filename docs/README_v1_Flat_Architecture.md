@@ -1,15 +1,17 @@
+> Historical layout snapshot. Folder names and claims in this document may be obsolete. Use the [current course index](../README.md).
+
 # 本科课程实践与综合实验全栈工程知识库
 # Comprehensive Undergraduate Course Practice & Engineering Experiment Portfolio
 
 <div align="center">
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
-[![Disciplines: 19 Courses](https://img.shields.io/badge/Disciplines-19%20Specialized%20Courses-red.svg?style=flat-square)](docs/)
-[![Domain: Automation & AI](https://img.shields.io/badge/Domain-Automation%20%7C%20Robotics%20%7C%20AI-blueviolet.svg?style=flat-square)](src/)
-[![Toolchain: Full Stack](https://img.shields.io/badge/Toolchain-MATLAB%20%7C%20Vivado%20%7C%20STM32%20%7C%20PyTorch-orange.svg?style=flat-square)](src/)
-[![Status: Complete](https://img.shields.io/badge/Curriculum-Full%20Theory%20to%20Practice-green.svg?style=flat-square)](docs/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](../LICENSE)
+[![Disciplines: 19 Courses](https://img.shields.io/badge/Disciplines-19%20Specialized%20Courses-red.svg?style=flat-square)](./)
+[![Domain: Automation & AI](https://img.shields.io/badge/Domain-Automation%20%7C%20Robotics%20%7C%20AI-blueviolet.svg?style=flat-square)](../README.md)
+[![Toolchain: Full Stack](https://img.shields.io/badge/Toolchain-MATLAB%20%7C%20Vivado%20%7C%20STM32%20%7C%20PyTorch-orange.svg?style=flat-square)](../README.md)
+[![Status: Complete](https://img.shields.io/badge/Curriculum-Full%20Theory%20to%20Practice-green.svg?style=flat-square)](./)
 
-[**中文文档**](README.md) | [**English**](README_EN.md) | [**日本語**](README_JA.md)
+**中文文档** (referenced resource not located in this archive) | **English** (referenced resource not located in this archive) | **日本語** (referenced resource not located in this archive)
 
 </div>
 
@@ -31,9 +33,9 @@
 
 | 课程体系四大层级系统架构图 | 自动控制原理闭环动态 PID 响应曲线与频域分析 |
 | :---: | :---: |
-| <img src="docs/images/system_architecture.png" width="450" alt="Curriculum Architecture"> | <img src="docs/images/demo_control_response.png" width="450" alt="Control Response"> |
+| <img src="images/system_architecture.png" width="450" alt="Curriculum Architecture"> | <img src="images/demo_control_response.png" width="450" alt="Control Response"> |
 | **计算机视觉高精度特征匹配与全景图像拼接** | **模式识别非参数估计与贝叶斯决策边界分类面** |
-| <img src="docs/images/demo_computer_vision.jpg" width="450" alt="Computer Vision"> | <img src="docs/images/demo_pattern_recognition.png" width="450" alt="Pattern Recognition"> |
+| <img src="images/demo_computer_vision.jpg" width="450" alt="Computer Vision"> | <img src="images/demo_pattern_recognition.png" width="450" alt="Pattern Recognition"> |
 
 </div>
 
@@ -45,25 +47,25 @@
 
 | 序号 | 专业课程名称 | 学科领域 | 核心技术栈与开发平台 | 关键工程实验与学术实践成果 | 目录相对路径 |
 | :---: | :--- | :---: | :--- | :--- | :--- |
-| **01** | **模拟电子技术与电路仿真** | 硬件电路 | Multisim, LTspice, 运算放大器 | 晶体管共射放大电路、有源带通滤波器、文氏电桥振荡器仿真与参数调优 | [`Analog-Electronics-and-Simulation`](Analog-Electronics-and-Simulation) |
-| **02** | **自动控制原理** | 控制科学 | MATLAB, Simulink, 示波器 | 根轨迹绘制、Bode/Nyquist 频域响应分析、物理电机转速/位置闭环 PID 整定 | [`Automatic-Control-Principles`](Automatic-Control-Principles) |
-| **03** | **C 语言程序设计与系统开发** | 基础计算 | C99, GCC, Visual Studio | 指针内存深层操作、动态双向链表、位域操作与控制台工程系统开发 | [`C-Programming-Labs`](C-Programming-Labs) |
-| **04** | **通信原理与计算机网络** | 通信网络 | Wireshark, MATLAB, PacketTracer | 数字基带传输、QAM/FSK 调制解调、TCP/IP 协议栈抓包分析与路由拓扑配置 | [`Communications-and-Network-Technologies`](Communications-and-Network-Technologies) |
-| **05** | **微机控制技术** | 控制工程 | MATLAB, 离散控制理论 | 连续控制器离散化（Tustin 双线性变换）、数字大林算法、纯滞后史密斯预估补偿 | [`Computer-Control-Technology`](Computer-Control-Technology) |
-| **06** | **计算机软件技术基础** | 软件系统 | C++, Python, SQL, 数据结构 | 散列表碰撞解决算法、红黑树遍历、关系型数据库规范化设计与事务处理 | [`Computer-Software-Basics`](Computer-Software-Basics) |
-| **07** | **计算机视觉** | 人工智能 | Python, OpenCV, NumPy | SIFT/ORB 特征提取、单应性矩阵变换、透视畸变矫正与多幅全景图像无缝拼接 | [`Computer-Vision`](Computer-Vision) |
-| **08** | **数据采集与信号处理** | 仪器测控 | LabVIEW, AD/DA, 信号调理 | 逐次逼近与 $\Sigma\text{-}\Delta$ ADC 采样量化、抗混叠模拟滤波器、高速数据采集传输 | [`Data-Acquisition-and-Processing`](Data-Acquisition-and-Processing) |
-| **09** | **数字电子技术与 FPGA** | 数字芯片 | Verilog HDL, Xilinx Vivado | 矩阵键盘消抖驱动、DAC 波形发生器、VGA 显存控制器与多功能计算器数字系统 | [`Digital-Electronics`](Digital-Electronics) |
-| **10** | **电子电路综合设计实验** | 硬件实践 | Altium Designer, 硬件焊接实测 | 传感器前置放大调理板、直流稳压电源设计、PCB 差分抗干扰布线与实测验证 | [`Electronic-Circuit-Experiments`](Electronic-Circuit-Experiments) |
-| **11** | **机器学习** | 智能决策 | PyTorch, Scikit-Learn | 卷积神经网络（CNN）通信调制样式星座图分类、MLP 锂电池健康状态（SOH）回归 | [`Machine-Learning`](Machine-Learning) |
-| **12** | **微机与嵌入式系统** | 嵌入式 | ARM Cortex-M, Keil MDK, HAL | 嵌套向量中断（NVIC）、DMA 双缓冲循环传输、C 语言与 Cortex-M 汇编混合编程 | [`Micro-Embedded`](Micro-Embedded) |
-| **13** | **现代控制理论** | 现代控制 | MATLAB, 状态空间分析 | 状态方程建立、卡尔曼能控性/能观性秩判据、状态反馈极点配置与全维状态观测器 | [`Modern-Control-Theory`](Modern-Control-Theory) |
-| **14** | **电机拖动与运动控制** | 电气工程 | MATLAB/Simulink, 电机驱动 | 直流电机机械特性测试、双闭环直流调速系统（ACR/ASR）设计与动态性能仿真 | [`Motor-Drives`](Motor-Drives) |
-| **15** | **模式识别** | 人工智能 | MATLAB, 统计学习 | 最小错误率贝叶斯决策边界建模、Parzen 窗非参数估计、支持向量机（SVM）人脸分类 | [`Pattern-Recognition`](Pattern-Recognition) |
-| **16** | **电力电子技术** | 电能变换 | MATLAB/Simulink, 斩波/逆变器 | Buck/Boost 直流斩波拓扑、单相桥式全控整流电路、SPWM 正弦脉宽调制仿真 | [`Power-Electronics-Technology`](Power-Electronics-Technology) |
-| **17** | **脉冲功率技术** | 高能物理 | PSpice, 高压脉冲成形 | 脉冲形成网络（PFN）放电动态仿真、Marx 发生器级联回路与高压脉冲陡化分析 | [`Pulse-Power-Technology`](Pulse-Power-Technology) |
-| **18** | **传感器原理与应用** | 工业感知 | 传感器电路, 误差补偿 | 应变片惠斯通电桥非线性度补偿、霍尔电流测速、热电偶冷端温度补偿电路 | [`Sensor-Principles-and-Applications`](Sensor-Principles-and-Applications) |
-| **19** | **信号与系统** | 信号处理 | MATLAB, 积分变换 | 连续与离散卷积积分、连续时间傅里叶变换（CTFT）、双边拉普拉斯变换收敛域分析 | [`Signals-and-Systems`](Signals-and-Systems) |
+| **01** | **模拟电子技术与电路仿真** | 硬件电路 | Multisim, LTspice, 运算放大器 | 晶体管共射放大电路、有源带通滤波器、文氏电桥振荡器仿真与参数调优 | `Analog-Electronics-and-Simulation` (referenced resource not located in this archive) |
+| **02** | **自动控制原理** | 控制科学 | MATLAB, Simulink, 示波器 | 根轨迹绘制、Bode/Nyquist 频域响应分析、物理电机转速/位置闭环 PID 整定 | `Automatic-Control-Principles` (referenced resource not located in this archive) |
+| **03** | **C 语言程序设计与系统开发** | 基础计算 | C99, GCC, Visual Studio | 指针内存深层操作、动态双向链表、位域操作与控制台工程系统开发 | `C-Programming-Labs` (referenced resource not located in this archive) |
+| **04** | **通信原理与计算机网络** | 通信网络 | Wireshark, MATLAB, PacketTracer | 数字基带传输、QAM/FSK 调制解调、TCP/IP 协议栈抓包分析与路由拓扑配置 | `Communications-and-Network-Technologies` (referenced resource not located in this archive) |
+| **05** | **微机控制技术** | 控制工程 | MATLAB, 离散控制理论 | 连续控制器离散化（Tustin 双线性变换）、数字大林算法、纯滞后史密斯预估补偿 | `Computer-Control-Technology` (referenced resource not located in this archive) |
+| **06** | **计算机软件技术基础** | 软件系统 | C++, Python, SQL, 数据结构 | 散列表碰撞解决算法、红黑树遍历、关系型数据库规范化设计与事务处理 | `Computer-Software-Basics` (referenced resource not located in this archive) |
+| **07** | **计算机视觉** | 人工智能 | Python, OpenCV, NumPy | SIFT/ORB 特征提取、单应性矩阵变换、透视畸变矫正与多幅全景图像无缝拼接 | `Computer-Vision` (referenced resource not located in this archive) |
+| **08** | **数据采集与信号处理** | 仪器测控 | LabVIEW, AD/DA, 信号调理 | 逐次逼近与 $\Sigma\text{-}\Delta$ ADC 采样量化、抗混叠模拟滤波器、高速数据采集传输 | `Data-Acquisition-and-Processing` (referenced resource not located in this archive) |
+| **09** | **数字电子技术与 FPGA** | 数字芯片 | Verilog HDL, Xilinx Vivado | 矩阵键盘消抖驱动、DAC 波形发生器、VGA 显存控制器与多功能计算器数字系统 | `Digital-Electronics` (referenced resource not located in this archive) |
+| **10** | **电子电路综合设计实验** | 硬件实践 | Altium Designer, 硬件焊接实测 | 传感器前置放大调理板、直流稳压电源设计、PCB 差分抗干扰布线与实测验证 | `Electronic-Circuit-Experiments` (referenced resource not located in this archive) |
+| **11** | **机器学习** | 智能决策 | PyTorch, Scikit-Learn | 卷积神经网络（CNN）通信调制样式星座图分类、MLP 锂电池健康状态（SOH）回归 | `Machine-Learning` (referenced resource not located in this archive) |
+| **12** | **微机与嵌入式系统** | 嵌入式 | ARM Cortex-M, Keil MDK, HAL | 嵌套向量中断（NVIC）、DMA 双缓冲循环传输、C 语言与 Cortex-M 汇编混合编程 | `Micro-Embedded` (referenced resource not located in this archive) |
+| **13** | **现代控制理论** | 现代控制 | MATLAB, 状态空间分析 | 状态方程建立、卡尔曼能控性/能观性秩判据、状态反馈极点配置与全维状态观测器 | `Modern-Control-Theory` (referenced resource not located in this archive) |
+| **14** | **电机拖动与运动控制** | 电气工程 | MATLAB/Simulink, 电机驱动 | 直流电机机械特性测试、双闭环直流调速系统（ACR/ASR）设计与动态性能仿真 | `Motor-Drives` (referenced resource not located in this archive) |
+| **15** | **模式识别** | 人工智能 | MATLAB, 统计学习 | 最小错误率贝叶斯决策边界建模、Parzen 窗非参数估计、支持向量机（SVM）人脸分类 | `Pattern-Recognition` (referenced resource not located in this archive) |
+| **16** | **电力电子技术** | 电能变换 | MATLAB/Simulink, 斩波/逆变器 | Buck/Boost 直流斩波拓扑、单相桥式全控整流电路、SPWM 正弦脉宽调制仿真 | `Power-Electronics-Technology` (referenced resource not located in this archive) |
+| **17** | **脉冲功率技术** | 高能物理 | PSpice, 高压脉冲成形 | 脉冲形成网络（PFN）放电动态仿真、Marx 发生器级联回路与高压脉冲陡化分析 | `Pulse-Power-Technology` (referenced resource not located in this archive) |
+| **18** | **传感器原理与应用** | 工业感知 | 传感器电路, 误差补偿 | 应变片惠斯通电桥非线性度补偿、霍尔电流测速、热电偶冷端温度补偿电路 | `Sensor-Principles-and-Applications` (referenced resource not located in this archive) |
+| **19** | **信号与系统** | 信号处理 | MATLAB, 积分变换 | 连续与离散卷积积分、连续时间傅里叶变换（CTFT）、双边拉普拉斯变换收敛域分析 | `Signals-and-Systems` (referenced resource not located in this archive) |
 
 ---
 
@@ -156,4 +158,4 @@ $$
 
 ## 6. 开源许可证 (License)
 
-本项目遵循 **MIT License** 开源协议。完整条款详见根目录下的 [LICENSE](LICENSE) 文件。
+本项目遵循 **MIT License** 开源协议。完整条款详见根目录下的 LICENSE (referenced resource not located in this archive) 文件。

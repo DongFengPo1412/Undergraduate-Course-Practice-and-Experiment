@@ -45,30 +45,30 @@ The data structures section explores the fundamental memory layouts and core ope
 ### A. Sequential Lists (顺序表)
 *   **Concepts**: Linear lists stored in contiguous memory arrays.
 *   **Programs**:
-    *   [Lab1_1_Sequential_List_Students.c](Data-Structures/src/Lab1_1_Sequential_List_Students.c): Sequential storage representation of student records, sorting, and score filtering ($<60$).
-    *   [Lab1_2_Set_Operations.c](Data-Structures/src/Lab1_2_Set_Operations.c): Modifying sequential list structures to calculate set intersection and union operations for integer arrays.
-*   **Report**: [Lab_Report_1_Sequential_Lists.pdf](Data-Structures/docs/Lab_Report_1_Sequential_Lists.pdf)
+    *   [Lab1_1_Sequential_List_Students.c](Data-Structures-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95/src/Lab1_1_Sequential_List_Students.c): Sequential storage representation of student records, sorting, and score filtering ($<60$).
+    *   [Lab1_2_Set_Operations.c](Data-Structures-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95/src/Lab1_2_Set_Operations.c): Modifying sequential list structures to calculate set intersection and union operations for integer arrays.
+*   **Report**: [Lab_Report_1_Sequential_Lists.pdf](Data-Structures-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95/docs/Lab_Report_1_Sequential_Lists.pdf)
 
 ### B. Linked Lists (链表)
 *   **Concepts**: Non-contiguous memory allocation using nodes linked via pointer fields.
 *   **Programs**:
-    *   [Lab2_1_Doubly_Linked_List.c](Data-Structures/src/Lab2_1_Doubly_Linked_List.c): Node structure containing `prior` and `next` pointers. Implements bidirectional traversal to search student grades.
-    *   [Lab2_2_Circular_Linked_List.c](Data-Structures/src/Lab2_2_Circular_Linked_List.c): Circular single linked lists representing multi-class student lists.
-*   **Report**: [Lab_Report_2_Linked_Lists.pdf](Data-Structures/docs/Lab_Report_2_Linked_Lists.pdf)
+    *   [Lab2_1_Doubly_Linked_List.c](Data-Structures-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95/src/Lab2_1_Doubly_Linked_List.c): Node structure containing `prior` and `next` pointers. Implements bidirectional traversal to search student grades.
+    *   [Lab2_2_Circular_Linked_List.c](Data-Structures-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95/src/Lab2_2_Circular_Linked_List.c): Circular single linked lists representing multi-class student lists.
+*   **Report**: [Lab_Report_2_Linked_Lists.pdf](Data-Structures-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95/docs/Lab_Report_2_Linked_Lists.pdf)
 
 ### C. Stacks (栈)
 *   **Concepts**: Last-In-First-Out (LIFO) data structure.
 *   **Programs**:
-    *   [Lab3_1_Sequential_Stack.c](Data-Structures/src/Lab3_1_Sequential_Stack.c): Sequential stack implementation to evaluate mathematical infix expressions of type `a+b*(c-d)`.
-    *   [Lab3_2_Linked_Stack.c](Data-Structures/src/Lab3_2_Linked_Stack.c): Linked stack implementation for mathematical expression evaluation.
-*   **Report**: [Lab_Report_3_Stacks.pdf](Data-Structures/docs/Lab_Report_3_Stacks.pdf)
+    *   [Lab3_1_Sequential_Stack.c](Data-Structures-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95/src/Lab3_1_Sequential_Stack.c): Sequential stack implementation to evaluate mathematical infix expressions of type `a+b*(c-d)`.
+    *   [Lab3_2_Linked_Stack.c](Data-Structures-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95/src/Lab3_2_Linked_Stack.c): Linked stack implementation for mathematical expression evaluation.
+*   **Report**: [Lab_Report_3_Stacks.pdf](Data-Structures-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95/docs/Lab_Report_3_Stacks.pdf)
 
 ### D. Queues (队列)
 *   **Concepts**: First-In-First-Out (FIFO) data structure.
 *   **Programs**:
-    *   [Lab4_1_Circular_Queue.c](Data-Structures/src/Lab4_1_Circular_Queue.c): Circular array queue resolving space wastage. Buffers a stream of characters (numbers enqueue, lowercases trigger dequeue).
-    *   [Lab4_2_Linked_Queue.c](Data-Structures/src/Lab4_2_Linked_Queue.c): Linked queue implementation for character stream buffering.
-*   **Report**: [Lab_Report_4_Queues.pdf](Data-Structures/docs/Lab_Report_4_Queues.pdf)
+    *   [Lab4_1_Circular_Queue.c](Data-Structures-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95/src/Lab4_1_Circular_Queue.c): Circular array queue resolving space wastage. Buffers a stream of characters (numbers enqueue, lowercases trigger dequeue).
+    *   [Lab4_2_Linked_Queue.c](Data-Structures-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95/src/Lab4_2_Linked_Queue.c): Linked queue implementation for character stream buffering.
+*   **Report**: [Lab_Report_4_Queues.pdf](Data-Structures-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95/docs/Lab_Report_4_Queues.pdf)
 
 ---
 
@@ -78,8 +78,8 @@ A desktop database management application designed to automate school classroom 
 
 ### System Specifications
 *   **Platform**: Microsoft Access
-*   **Database File**: [Classroom_Management_System.accdb](Database-Project/src/Classroom_Management_System.accdb) (Includes tables, pre-configured relations, SQL query templates, and user forms).
-*   **Design Report**: [Database_Design_Report_Classroom_Management.pdf](Database-Project/docs/Database_Design_Report_Classroom_Management.pdf) (Outlining entity relationships (E-R diagrams), schema normalization, and interface layout).
+*   **Database File**: [Classroom_Management_System.accdb](Database-Project-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E7%A8%8B/src/Classroom_Management_System.accdb) (Includes tables, pre-configured relations, SQL query templates, and user forms).
+*   **Design Report**: [Database_Design_Report_Classroom_Management.pdf](Database-Project-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E7%A8%8B/docs/Database_Design_Report_Classroom_Management.pdf) (Outlining entity relationships (E-R diagrams), schema normalization, and interface layout).
 
 ### Database Relations
 The database defines three primary tables with established integrity constraints (primary and foreign keys):

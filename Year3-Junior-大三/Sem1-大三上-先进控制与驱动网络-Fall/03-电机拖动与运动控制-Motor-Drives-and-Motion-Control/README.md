@@ -49,9 +49,9 @@ Where:
 2.  **Field Weakening Control (弱磁调速)**: Reducing the excitation current (and hence flux $\Phi$) while keeping $U$ at rated. The no-load speed rises, and the slope of the curve increases, making the mechanical characteristics softer.
 
 ### Files
-*   **Simulink Model**: [DC_Motor_Open_Loop_Control.slx](Simulation-Labs/src/DC_Motor_Open_Loop_Control.slx)
-*   **Simulation Report**: [Simulation_Lab_Report_1_DC_Motor.pdf](Simulation-Labs/docs/Simulation_Lab_Report_1_DC_Motor.pdf)
-*   **Physical Lab Report**: [Physical_Lab_Report_DC_Motor_Experiment.pdf](Physical-Labs/docs/Physical_Lab_Report_DC_Motor_Experiment.pdf) - Detailing physical bench setups, parameter measurements, and measured vs simulated curves.
+*   **Simulink Model**: [DC_Motor_Open_Loop_Control.slx](Simulation-Labs-%E5%8F%8C%E9%97%AD%E7%8E%AF%E7%B3%BB%E7%BB%9F%E4%BB%BF%E7%9C%9F/Source-%E4%BB%BF%E7%9C%9F%E6%A8%A1%E5%9E%8B-src/DC_Motor_Open_Loop_Control.slx)
+*   **Simulation Report**: Simulation_Lab_Report_1_DC_Motor.pdf (referenced resource not located in this archive)
+*   **Physical Lab Report**: Physical_Lab_Report_DC_Motor_Experiment.pdf (referenced resource not located in this archive) - Detailing physical bench setups, parameter measurements, and measured vs simulated curves.
 
 ---
 
@@ -65,11 +65,11 @@ $$T = \frac{3 p U_1^2 R_2'}{s \omega_1 \left[ (R_1 + \frac{R_2'}{s})^2 + (X_1 + 
 Where $s$ is the slip. Reducing $U_1$ significantly reduces the maximum torque ($T_m \propto U_1^2$), making the speed highly sensitive to load torque changes.
 
 ### MATLAB Data Analysis
-The script [Motor_Mechanical_Characteristics_Plot.m](Simulation-Labs/src/Motor_Mechanical_Characteristics_Plot.m) uses the user's simulation data to plot mechanical speed-torque curves under:
+The script [Motor_Mechanical_Characteristics_Plot.m](Simulation-Labs-%E5%8F%8C%E9%97%AD%E7%8E%AF%E7%B3%BB%E7%BB%9F%E4%BB%BF%E7%9C%9F/Source-%E4%BB%BF%E7%9C%9F%E6%A8%A1%E5%9E%8B-src/Motor_Mechanical_Characteristics_Plot.m) uses the user's simulation data to plot mechanical speed-torque curves under:
 *   **Rated Voltage ($U_N$)**: Speed drops slightly from $1496\text{ r/min}$ (at $0.1T_N$) to $1464\text{ r/min}$ (at rated $T_N$).
 *   **Half Voltage ($0.5U_N$)**: Speed drops significantly from $1484\text{ r/min}$ (at $0.1T_N$) down to $1256\text{ r/min}$ (at rated $T_N$), demonstrating a much softer mechanical characteristic.
 
 ### Files
-*   **Simulink Model**: [AC_Induction_Motor_Open_Loop_Control.slx](Simulation-Labs/src/AC_Induction_Motor_Open_Loop_Control.slx)
-*   **Plotting Script**: [Motor_Mechanical_Characteristics_Plot.m](Simulation-Labs/src/Motor_Mechanical_Characteristics_Plot.m)
-*   **Simulation Report**: [Simulation_Lab_Report_2_AC_Motor.pdf](Simulation-Labs/docs/Simulation_Lab_Report_2_AC_Motor.pdf)
+*   **Simulink Model**: [AC_Induction_Motor_Open_Loop_Control.slx](Simulation-Labs-%E5%8F%8C%E9%97%AD%E7%8E%AF%E7%B3%BB%E7%BB%9F%E4%BB%BF%E7%9C%9F/Source-%E4%BB%BF%E7%9C%9F%E6%A8%A1%E5%9E%8B-src/AC_Induction_Motor_Open_Loop_Control.slx)
+*   **Plotting Script**: [Motor_Mechanical_Characteristics_Plot.m](Simulation-Labs-%E5%8F%8C%E9%97%AD%E7%8E%AF%E7%B3%BB%E7%BB%9F%E4%BB%BF%E7%9C%9F/Source-%E4%BB%BF%E7%9C%9F%E6%A8%A1%E5%9E%8B-src/Motor_Mechanical_Characteristics_Plot.m)
+*   **Simulation Report**: Simulation_Lab_Report_2_AC_Motor.pdf (referenced resource not located in this archive)

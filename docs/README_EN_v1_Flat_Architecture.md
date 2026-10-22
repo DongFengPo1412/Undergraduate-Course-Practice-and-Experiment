@@ -1,14 +1,16 @@
+> Historical layout snapshot. Folder names and claims in this document may be obsolete. Use the [current course index](../README.md).
+
 # Comprehensive Undergraduate Course Practice & Engineering Experiment Portfolio
 
 <div align="center">
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
-[![Disciplines: 19 Courses](https://img.shields.io/badge/Disciplines-19%20Specialized%20Courses-red.svg?style=flat-square)](docs/)
-[![Domain: Automation & AI](https://img.shields.io/badge/Domain-Automation%20%7C%20Robotics%20%7C%20AI-blueviolet.svg?style=flat-square)](src/)
-[![Toolchain: Full Stack](https://img.shields.io/badge/Toolchain-MATLAB%20%7C%20Vivado%20%7C%20STM32%20%7C%20PyTorch-orange.svg?style=flat-square)](src/)
-[![Status: Complete](https://img.shields.io/badge/Curriculum-Full%20Theory%20to%20Practice-green.svg?style=flat-square)](docs/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](../LICENSE)
+[![Disciplines: 19 Courses](https://img.shields.io/badge/Disciplines-19%20Specialized%20Courses-red.svg?style=flat-square)](./)
+[![Domain: Automation & AI](https://img.shields.io/badge/Domain-Automation%20%7C%20Robotics%20%7C%20AI-blueviolet.svg?style=flat-square)](../README.md)
+[![Toolchain: Full Stack](https://img.shields.io/badge/Toolchain-MATLAB%20%7C%20Vivado%20%7C%20STM32%20%7C%20PyTorch-orange.svg?style=flat-square)](../README.md)
+[![Status: Complete](https://img.shields.io/badge/Curriculum-Full%20Theory%20to%20Practice-green.svg?style=flat-square)](./)
 
-[**中文文档**](README.md) | [**English**](README_EN.md) | [**日本語**](README_JA.md)
+**中文文档** (referenced resource not located in this archive) | **English** (referenced resource not located in this archive) | **日本語** (referenced resource not located in this archive)
 
 </div>
 
@@ -30,9 +32,9 @@ Spanning analog/digital microelectronics and FPGA logic synthesis (Analog Electr
 
 | Four-Tier Curriculum System Architecture | Automatic Control Closed-Loop PID Dynamic Response |
 | :---: | :---: |
-| <img src="docs/images/system_architecture.png" width="450" alt="Curriculum Architecture"> | <img src="docs/images/demo_control_response.png" width="450" alt="Control Response"> |
+| <img src="images/system_architecture.png" width="450" alt="Curriculum Architecture"> | <img src="images/demo_control_response.png" width="450" alt="Control Response"> |
 | **Computer Vision Homography & Panoramic Image Stitching** | **Pattern Recognition Non-Parametric Bayesian Classification** |
-| <img src="docs/images/demo_computer_vision.jpg" width="450" alt="Computer Vision"> | <img src="docs/images/demo_pattern_recognition.png" width="450" alt="Pattern Recognition"> |
+| <img src="images/demo_computer_vision.jpg" width="450" alt="Computer Vision"> | <img src="images/demo_pattern_recognition.png" width="450" alt="Pattern Recognition"> |
 
 </div>
 
@@ -44,25 +46,25 @@ The following matrix categorizes all 19 specialized engineering courses, their d
 
 | No. | Course Discipline Title | Domain | Core Tech Stack & Tools | Key Laboratory Experiments & Engineering Deliverables | Relative Directory Path |
 | :---: | :--- | :---: | :--- | :--- | :--- |
-| **01** | **Analog Electronics & Simulation** | Hardware | Multisim, LTspice, Op-Amps | BJT common-emitter amplification, active bandpass filters, Wien-bridge oscillator simulation | [`Analog-Electronics-and-Simulation`](Analog-Electronics-and-Simulation) |
-| **02** | **Automatic Control Principles** | Control | MATLAB, Simulink, Oscilloscope | Root-locus analysis, Bode/Nyquist frequency response, DC motor speed/position closed-loop PID tuning | [`Automatic-Control-Principles`](Automatic-Control-Principles) |
-| **03** | **C Programming & Low-Level Systems** | Computing | C99, GCC, Visual Studio | Pointer arithmetic, dynamic doubly linked lists, bitfield manipulation, console engineering systems | [`C-Programming-Labs`](C-Programming-Labs) |
-| **04** | **Communications & Networking** | Telecom | Wireshark, MATLAB, PacketTracer | Digital baseband transmission, QAM/FSK modulation, packet inspection across TCP/IP protocol stack | [`Communications-and-Network-Technologies`](Communications-and-Network-Technologies) |
-| **05** | **Computer Control Technology** | Control | MATLAB, Discrete Control | Continuous-to-discrete conversion (Tustin transform), Dahlin digital algorithm, Smith predictor | [`Computer-Control-Technology`](Computer-Control-Technology) |
-| **06** | **Computer Software Basics** | Software | C++, Python, SQL, Data Structures | Hash table collision algorithms, Red-Black tree traversals, relational database schema normalization | [`Computer-Software-Basics`](Computer-Software-Basics) |
-| **07** | **Computer Vision** | AI & Vision | Python, OpenCV, NumPy | SIFT/ORB feature extraction, homography matrix estimation, perspective correction, image blending | [`Computer-Vision`](Computer-Vision) |
-| **08** | **Data Acquisition & Processing** | Instrumentation | LabVIEW, AD/DA, Signal Circuits | SAR and $\Sigma\text{-}\Delta$ ADC conversion, anti-aliasing filtering, high-speed acquisition pipelines | [`Data-Acquisition-and-Processing`](Data-Acquisition-and-Processing) |
-| **09** | **Digital Electronics & FPGA** | Digital Logic | Verilog HDL, Xilinx Vivado | 4x4 matrix key debouncing, DAC arbitrary waveform generation, VGA framebuffers, calculator ASIC | [`Digital-Electronics`](Digital-Electronics) |
-| **10** | **Electronic Circuit Experiments** | Hardware | Altium Designer, Soldering, Test | Sensor preamplifier PCB layout, regulated DC linear supply, differential noise immunity verification | [`Electronic-Circuit-Experiments`](Electronic-Circuit-Experiments) |
-| **11** | **Machine Learning** | Applied AI | PyTorch, Scikit-Learn | CNN for constellation modulation classification, MLP for Lithium-ion battery SOH regression | [`Machine-Learning`](Machine-Learning) |
-| **12** | **Micro-Embedded Systems (STM32)** | Embedded | ARM Cortex-M, Keil MDK, HAL | Nested Vectored Interrupts (NVIC), circular DMA double-buffering, mixed C and Cortex-M assembly | [`Micro-Embedded`](Micro-Embedded) |
-| **13** | **Modern Control Theory** | Modern Control | MATLAB, State-Space Analysis | State equation formulation, Kalman controllability/observability rank criteria, pole placement observer | [`Modern-Control-Theory`](Modern-Control-Theory) |
-| **14** | **Motor Drives & Motion Actuation** | Electrical | MATLAB/Simulink, Motor Drivers | DC motor mechanical characteristics, dual closed-loop speed/current regulation (ACR/ASR) simulation | [`Motor-Drives`](Motor-Drives) |
-| **15** | **Pattern Recognition** | Machine Learning | MATLAB, Statistical Learning | Minimum error-rate Bayesian decision boundary, Parzen window density estimation, SVM face classification | [`Pattern-Recognition`](Pattern-Recognition) |
-| **16** | **Power Electronics Technology** | Power Eng. | MATLAB/Simulink, Inverters | Buck/Boost DC-DC converters, single-phase fully-controlled bridge rectifiers, SPWM modulation | [`Power-Electronics-Technology`](Power-Electronics-Technology) |
-| **17** | **Pulse Power Technology** | High Energy | PSpice, Pulse Forming Networks | Pulse Forming Network (PFN) discharge dynamics, multi-stage Marx generators, pulse steepening | [`Pulse-Power-Technology`](Pulse-Power-Technology) |
-| **18** | **Sensor Principles & Applications** | Sensing | Conditioning Circuits, Wheatstone | Strain gauge bridge non-linearity compensation, Hall-effect current sensing, thermocouple cold-junction | [`Sensor-Principles-and-Applications`](Sensor-Principles-and-Applications) |
-| **19** | **Signals and Systems** | Signal Theory | MATLAB, Integral Transforms | Continuous/discrete convolution, Continuous-Time Fourier Transform (CTFT), Laplace ROC analysis | [`Signals-and-Systems`](Signals-and-Systems) |
+| **01** | **Analog Electronics & Simulation** | Hardware | Multisim, LTspice, Op-Amps | BJT common-emitter amplification, active bandpass filters, Wien-bridge oscillator simulation | `Analog-Electronics-and-Simulation` (referenced resource not located in this archive) |
+| **02** | **Automatic Control Principles** | Control | MATLAB, Simulink, Oscilloscope | Root-locus analysis, Bode/Nyquist frequency response, DC motor speed/position closed-loop PID tuning | `Automatic-Control-Principles` (referenced resource not located in this archive) |
+| **03** | **C Programming & Low-Level Systems** | Computing | C99, GCC, Visual Studio | Pointer arithmetic, dynamic doubly linked lists, bitfield manipulation, console engineering systems | `C-Programming-Labs` (referenced resource not located in this archive) |
+| **04** | **Communications & Networking** | Telecom | Wireshark, MATLAB, PacketTracer | Digital baseband transmission, QAM/FSK modulation, packet inspection across TCP/IP protocol stack | `Communications-and-Network-Technologies` (referenced resource not located in this archive) |
+| **05** | **Computer Control Technology** | Control | MATLAB, Discrete Control | Continuous-to-discrete conversion (Tustin transform), Dahlin digital algorithm, Smith predictor | `Computer-Control-Technology` (referenced resource not located in this archive) |
+| **06** | **Computer Software Basics** | Software | C++, Python, SQL, Data Structures | Hash table collision algorithms, Red-Black tree traversals, relational database schema normalization | `Computer-Software-Basics` (referenced resource not located in this archive) |
+| **07** | **Computer Vision** | AI & Vision | Python, OpenCV, NumPy | SIFT/ORB feature extraction, homography matrix estimation, perspective correction, image blending | `Computer-Vision` (referenced resource not located in this archive) |
+| **08** | **Data Acquisition & Processing** | Instrumentation | LabVIEW, AD/DA, Signal Circuits | SAR and $\Sigma\text{-}\Delta$ ADC conversion, anti-aliasing filtering, high-speed acquisition pipelines | `Data-Acquisition-and-Processing` (referenced resource not located in this archive) |
+| **09** | **Digital Electronics & FPGA** | Digital Logic | Verilog HDL, Xilinx Vivado | 4x4 matrix key debouncing, DAC arbitrary waveform generation, VGA framebuffers, calculator ASIC | `Digital-Electronics` (referenced resource not located in this archive) |
+| **10** | **Electronic Circuit Experiments** | Hardware | Altium Designer, Soldering, Test | Sensor preamplifier PCB layout, regulated DC linear supply, differential noise immunity verification | `Electronic-Circuit-Experiments` (referenced resource not located in this archive) |
+| **11** | **Machine Learning** | Applied AI | PyTorch, Scikit-Learn | CNN for constellation modulation classification, MLP for Lithium-ion battery SOH regression | `Machine-Learning` (referenced resource not located in this archive) |
+| **12** | **Micro-Embedded Systems (STM32)** | Embedded | ARM Cortex-M, Keil MDK, HAL | Nested Vectored Interrupts (NVIC), circular DMA double-buffering, mixed C and Cortex-M assembly | `Micro-Embedded` (referenced resource not located in this archive) |
+| **13** | **Modern Control Theory** | Modern Control | MATLAB, State-Space Analysis | State equation formulation, Kalman controllability/observability rank criteria, pole placement observer | `Modern-Control-Theory` (referenced resource not located in this archive) |
+| **14** | **Motor Drives & Motion Actuation** | Electrical | MATLAB/Simulink, Motor Drivers | DC motor mechanical characteristics, dual closed-loop speed/current regulation (ACR/ASR) simulation | `Motor-Drives` (referenced resource not located in this archive) |
+| **15** | **Pattern Recognition** | Machine Learning | MATLAB, Statistical Learning | Minimum error-rate Bayesian decision boundary, Parzen window density estimation, SVM face classification | `Pattern-Recognition` (referenced resource not located in this archive) |
+| **16** | **Power Electronics Technology** | Power Eng. | MATLAB/Simulink, Inverters | Buck/Boost DC-DC converters, single-phase fully-controlled bridge rectifiers, SPWM modulation | `Power-Electronics-Technology` (referenced resource not located in this archive) |
+| **17** | **Pulse Power Technology** | High Energy | PSpice, Pulse Forming Networks | Pulse Forming Network (PFN) discharge dynamics, multi-stage Marx generators, pulse steepening | `Pulse-Power-Technology` (referenced resource not located in this archive) |
+| **18** | **Sensor Principles & Applications** | Sensing | Conditioning Circuits, Wheatstone | Strain gauge bridge non-linearity compensation, Hall-effect current sensing, thermocouple cold-junction | `Sensor-Principles-and-Applications` (referenced resource not located in this archive) |
+| **19** | **Signals and Systems** | Signal Theory | MATLAB, Integral Transforms | Continuous/discrete convolution, Continuous-Time Fourier Transform (CTFT), Laplace ROC analysis | `Signals-and-Systems` (referenced resource not located in this archive) |
 
 ---
 
@@ -155,4 +157,4 @@ $$
 
 ## 6. License
 
-This repository is distributed under the open-source **MIT License**. Refer to the [LICENSE](LICENSE) file for complete details.
+This repository is distributed under the open-source **MIT License**. Refer to the LICENSE (referenced resource not located in this archive) file for complete details.

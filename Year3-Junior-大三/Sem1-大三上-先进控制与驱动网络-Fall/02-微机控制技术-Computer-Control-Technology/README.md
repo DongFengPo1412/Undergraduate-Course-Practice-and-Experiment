@@ -1,6 +1,6 @@
 # Computer Control Technology (计算机控制技术)
 
-This repository contains the academic portfolio for the course **Computer Control Technology (计算机控制技术)**, completed by **Chaoran Liu (刘超然)**. 
+This repository contains the academic portfolio for the course **Computer Control Technology (计算机控制技术)**, completed by **Chaoran Liu (刘超然)**.
 
 The portfolio showcases discrete-time control engineering designs, including **Digital PID Control Systems** and **Minimal Prototype (Deadbeat) Control Systems** modeled and simulated using MATLAB and Simulink.
 
@@ -39,8 +39,8 @@ Where:
 *   $T$ is the sampling period.
 
 ### Design and Analysis
-Using the Simulink model [Digital_PID_Control_System.slx](Simulation-Labs/src/Digital_PID_Control_System.slx), the effects of $K_p, K_i, K_d$ parameters and the sampling period $T$ on the system overshoot, settling time, and steady-state error are systematically simulated and evaluated. 
-Detailed analysis is provided in the report [Lab_Report_1_Digital_PID_Control.pdf](Simulation-Labs/docs/Lab_Report_1_Digital_PID_Control.pdf).
+Using the Simulink model Digital_PID_Control_System.slx (referenced resource not located in this archive), the effects of $K_p, K_i, K_d$ parameters and the sampling period $T$ on the system overshoot, settling time, and steady-state error are systematically simulated and evaluated.
+Detailed analysis is provided in the report [Lab_Report_1_Digital_PID_Control.pdf](Simulation-Labs-%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E4%BB%BF%E7%9C%9F/docs/Lab_Report_1_Digital_PID_Control.pdf).
 
 ---
 
@@ -59,5 +59,5 @@ $$G(z) = (1 - z^{-1}) \mathcal{Z}\left\{ \frac{10}{s^2(s+1)} \right\} = \frac{3.
 2.  **Ripple-Free Deadbeat Control (无纹波最少拍)**: By placing constraints on the closed-loop transfer function to ensure the controller $D(z)$ cancels the plant's open-loop zeros (excluding $z=1$), the control signal settles to a constant value, thereby eliminating inter-sample oscillations.
 
 ### Files
-*   **Simulink Model**: [Deadbeat_Control_System.slx](Simulation-Labs/src/Deadbeat_Control_System.slx) (Simulates step/ramp responses and evaluates control signals to verify the presence or absence of ripples).
-*   **Simulation Report**: [Lab_Report_2_Deadbeat_Control.pdf](Simulation-Labs/docs/Lab_Report_2_Deadbeat_Control.pdf)
+*   **Simulink Model**: Deadbeat_Control_System.slx (referenced resource not located in this archive) (Simulates step/ramp responses and evaluates control signals to verify the presence or absence of ripples).
+*   **Simulation Report**: [Lab_Report_2_Deadbeat_Control.pdf](Simulation-Labs-%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E4%BB%BF%E7%9C%9F/docs/Lab_Report_2_Deadbeat_Control.pdf)

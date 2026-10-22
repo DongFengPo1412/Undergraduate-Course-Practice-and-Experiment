@@ -31,13 +31,25 @@ def load_battery_data(file_path):
         vals = [cell.value for cell in row]
         if any(v is None for v in [vals[cc_idx], vals[cv_idx], vals[time_idx], vals[ica_idx], vals[soh_idx]]):
             continue
-        X.append([vals[cc_idx], vals[cv_idx], vals[time_idx], vals[ica_idx]])
-        y.append(vals[soh_idx])
+        try:
+            features = np.asarray([vals[cc_idx], vals[cv_idx], vals[time_idx], vals[ica_idx]], dtype=np.float32)
+            target = float(vals[soh_idx])
+        except (ValueError, TypeError):
+            continue
+        if not np.isfinite(features).all() or not np.isfinite(target):
+            continue
+        X.append(features)
+        y.append(target)
         
     wb.close()
+    if not X:
+        raise ValueError(f'No finite complete samples in {file_path}')
     return np.array(X, dtype=np.float32), np.array(y, dtype=np.float32)
 
 def main():
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    torch.manual_seed(42)
+    np.random.seed(42)
     data_dir = os.path.join(current_dir, "CLACEdata")
     
     train_files = [
@@ -58,6 +70,8 @@ def main():
             X_train_list.append(X_f)
             y_train_list.append(y_f)
             
+    if not X_train_list:
+        raise FileNotFoundError(f'No training workbooks found in {data_dir}')
     X_train = np.vstack(X_train_list)
     y_train = np.concatenate(y_train_list)
     

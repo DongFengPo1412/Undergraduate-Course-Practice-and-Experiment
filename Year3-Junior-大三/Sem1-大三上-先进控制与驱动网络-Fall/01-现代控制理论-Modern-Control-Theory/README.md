@@ -46,7 +46,7 @@ $$C = \begin{bmatrix} 1 & 0 \end{bmatrix}, \quad D = 0$$
 
 ## 2. Core Control Analysis & Design Tasks
 
-All analysis and designs are implemented and verified in [RLC_System_Simulation.m](Simulation-Labs/src/RLC_System_Simulation.m) and detailed in [Modern_Control_Lab_Report_RLC_Circuit.pdf](Simulation-Labs/docs/Modern_Control_Lab_Report_RLC_Circuit.pdf).
+All analysis and designs are implemented and verified in [RLC_System_Simulation.m](Simulation-Labs-%E7%8A%B6%E6%80%81%E7%A9%BA%E9%97%B4%E4%BB%BF%E7%9C%9F/Source-%E4%BB%BF%E7%9C%9F%E8%84%9A%E6%9C%AC-src/RLC_System_Simulation.m) and detailed in [Modern_Control_Lab_Report_RLC_Circuit.pdf](Simulation-Labs-%E7%8A%B6%E6%80%81%E7%A9%BA%E9%97%B4%E4%BB%BF%E7%9C%9F/Docs-%E8%AE%B2%E4%B9%89%E4%B8%8E%E6%96%87%E6%A1%A3-docs/Modern_Control_Lab_Report_RLC_Circuit.pdf).
 
 ### A. Time-Domain Analysis & System Response
 *   **Zero-Input Response**: Evaluated from an initial state of $x(0) = \begin{bmatrix} 5\text{ V} \\ 0\text{ A} \end{bmatrix}$ (fully charged capacitor).
@@ -82,7 +82,7 @@ Since the inductor current $i_L(t)$ might be hard to measure directly in practic
 
 ## 3. Code Implementation Details
 
-The MATLAB file [RLC_System_Simulation.m](Simulation-Labs/src/RLC_System_Simulation.m) executes:
+The MATLAB file [RLC_System_Simulation.m](Simulation-Labs-%E7%8A%B6%E6%80%81%E7%A9%BA%E9%97%B4%E4%BB%BF%E7%9C%9F/Source-%E4%BB%BF%E7%9C%9F%E8%84%9A%E6%9C%AC-src/RLC_System_Simulation.m) executes:
 1.  State-Space Model setup and parameter configuration.
 2.  Computation of eigenvalues, natural frequency, and open-loop damping ratio.
 3.  Plotting zero-input response and zero-state step response.

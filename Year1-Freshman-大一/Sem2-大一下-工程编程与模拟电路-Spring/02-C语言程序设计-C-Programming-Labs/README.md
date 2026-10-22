@@ -29,29 +29,29 @@ C-Programming-Labs/
 
 ## 1. Core Programming Topics
 
-All programming projects are categorized into four core laboratory phases, matching the source code implementations in [src/](src/) and detailed documentation in [docs/](docs/).
+All programming projects are categorized into four core laboratory phases, matching the source code implementations in src/ (referenced resource not located in this archive) and detailed documentation in docs/ (referenced resource not located in this archive).
 
 ### A. Basic Control Structures (顺序、分支与循环结构)
 *   **Concepts**: Sequence executions; conditional branching using `if-else` and `switch-case` blocks; iterative loops using `for`, `while`, and `do-while` structures.
-*   **Implementation**: Covered in the comprehensive code bank [C_Course_Exercises.c](src/C_Course_Exercises.c) (includes relational/logical expressions, math routines, and nested loops).
-*   **Report**: [Lab_Report_1_Basic_Structures.pdf](docs/Lab_Report_1_Basic_Structures.pdf)
+*   **Implementation**: Covered in the comprehensive code bank C_Course_Exercises.c (referenced resource not located in this archive) (includes relational/logical expressions, math routines, and nested loops).
+*   **Report**: [Lab_Report_1_Basic_Structures.pdf](Docs-%E8%AF%BE%E4%BB%B6%E4%B8%8E%E6%96%87%E6%A1%A3-docs/Lab_Report_1_Basic_Structures.pdf)
 
 ### B. Arrays and String Buffers (数组与字符串处理)
 *   **Concepts**: Linear search and array index calculations; bubble sort and selection sort algorithms; multidimensional arrays for matrix calculations; string buffers and character arrays.
-*   **Implementation**: Code examples in [C_Course_Exercises.c](src/C_Course_Exercises.c) demonstrating sorting arrays and index searches.
-*   **Report**: [Lab_Report_2_Arrays.pdf](docs/Lab_Report_2_Arrays.pdf)
+*   **Implementation**: Code examples in C_Course_Exercises.c (referenced resource not located in this archive) demonstrating sorting arrays and index searches.
+*   **Report**: [Lab_Report_2_Arrays.pdf](Docs-%E8%AF%BE%E4%BB%B6%E4%B8%8E%E6%96%87%E6%A1%A3-docs/Lab_Report_2_Arrays.pdf)
 
 ### C. Modular Functions and Pointers (函数与指针)
 *   **Concepts**: Function definition, prototyping, and scoping; variable scope (local vs. global, static variables); argument passing mechanisms (pass-by-value vs. pass-by-pointer/address).
-*   **Implementation**: Subroutine definitions and address-passing exercises in [C_Course_Exercises.c](src/C_Course_Exercises.c).
-*   **Report**: [Lab_Report_3_Functions.pdf](docs/Lab_Report_3_Functions.pdf)
+*   **Implementation**: Subroutine definitions and address-passing exercises in C_Course_Exercises.c (referenced resource not located in this archive).
+*   **Report**: [Lab_Report_3_Functions.pdf](Docs-%E8%AF%BE%E4%BB%B6%E4%B8%8E%E6%96%87%E6%A1%A3-docs/Lab_Report_3_Functions.pdf)
 
 ### D. User-Defined Structures (结构体数据结构)
 *   **Concepts**: Packaging heterogeneous data fields (e.g., student records containing ID, name, and grades) into a single user-defined datatype `struct`. Accessing structure members using member operator (`.`) and structure pointer arrow operator (`->`).
 *   **Programs**:
-    *   [ch9_Structs_Average.c](src/ch9_Structs_Average.c): Implements struct arrays to store student scores and compute the average score for each student.
-    *   [ch10_Scores_Management.c](src/ch10_Scores_Management.c): Manages student scores using structure pointers and queries English/Math performance.
-*   **Report**: [Lab_Report_4_Structures.pdf](docs/Lab_Report_4_Structures.pdf)
+    *   [ch9_Structs_Average.c](Source-%E6%A0%B8%E5%BF%83%E6%BA%90%E7%A0%81/ch9_Structs_Average.c): Implements struct arrays to store student scores and compute the average score for each student.
+    *   [ch10_Scores_Management.c](Source-%E6%A0%B8%E5%BF%83%E6%BA%90%E7%A0%81/ch10_Scores_Management.c): Manages student scores using structure pointers and queries English/Math performance.
+*   **Report**: [Lab_Report_4_Structures.pdf](Docs-%E8%AF%BE%E4%BB%B6%E4%B8%8E%E6%96%87%E6%A1%A3-docs/Lab_Report_4_Structures.pdf)
 
 ---
 

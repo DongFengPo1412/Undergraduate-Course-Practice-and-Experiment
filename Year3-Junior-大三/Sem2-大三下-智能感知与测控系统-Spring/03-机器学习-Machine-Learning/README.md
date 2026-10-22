@@ -6,19 +6,19 @@ This repository contains the academic portfolio for the **Machine Learning (机�
 
 ## Portfolio Navigation
 
-- 📁 **[Project 1: Constellation Classification for Modulation Recognition](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Machine-Learning/Project1-Modulation-Classification)**
-  - 📄 [CNN Model Training Script](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Machine-Learning/Project1-Modulation-Classification/src/train_classifier.py)
-  - 📄 [Constellation Inference Predictor](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Machine-Learning/Project1-Modulation-Classification/src/predict_classifier.py)
-  - 📄 [Trained CNN Model Weights](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Machine-Learning/Project1-Modulation-Classification/src/modulation_model.pth)
-  - 📁 [Constellation Image Dataset](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Machine-Learning/Project1-Modulation-Classification/src/dataset)
-  - 📄 [Chinese Academic Report (PDF)](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Machine-Learning/Project1-Modulation-Classification/docs/Modulation_Classification_Report.pdf)
-  - 🖼️ [Training Loss & Accuracy Curves](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Machine-Learning/Project1-Modulation-Classification/docs/training_curves.png)
-- 📁 **[Project 2: Data-Driven Battery SOH Estimation via MLP Regression](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Machine-Learning/Project2-Battery-SOH-Regression)**
-  - 📄 [MLP Regressor Training Script](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Machine-Learning/Project2-Battery-SOH-Regression/src/battery_soh_regressor.py)
-  - 📄 [Trained Regressor Model Weights](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Machine-Learning/Project2-Battery-SOH-Regression/src/battery_model.pth)
-  - 📁 [Battery Aging Excel Datasets](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Machine-Learning/Project2-Battery-SOH-Regression/src/CLACEdata)
-  - 📄 [Chinese Academic Report (PDF)](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Machine-Learning/Project2-Battery-SOH-Regression/docs/Lithium_Battery_SOH_Estimation_Report.pdf)
-  - 🖼️ [Battery SOH Prediction vs. Ground Truth Decay Plot](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Machine-Learning/Project2-Battery-SOH-Regression/docs/soh_prediction_fit.png)
+- 📁 **[Project 1: Constellation Classification for Modulation Recognition](Project1-%E8%B0%83%E5%88%B6%E4%BF%A1%E5%8F%B7%E5%88%86%E7%B1%BB-Modulation-Classification)**
+  - 📄 [CNN Model Training Script](Project1-%E8%B0%83%E5%88%B6%E4%BF%A1%E5%8F%B7%E5%88%86%E7%B1%BB-Modulation-Classification/src/train_classifier.py)
+  - 📄 [Constellation Inference Predictor](Project1-%E8%B0%83%E5%88%B6%E4%BF%A1%E5%8F%B7%E5%88%86%E7%B1%BB-Modulation-Classification/src/predict_classifier.py)
+  - 📄 [Trained CNN Model Weights](Project1-%E8%B0%83%E5%88%B6%E4%BF%A1%E5%8F%B7%E5%88%86%E7%B1%BB-Modulation-Classification/src/modulation_model.pth)
+  - 📁 [Constellation Image Dataset](Project1-%E8%B0%83%E5%88%B6%E4%BF%A1%E5%8F%B7%E5%88%86%E7%B1%BB-Modulation-Classification/src/dataset)
+  - 📄 [Chinese Academic Report (PDF)](Project1-%E8%B0%83%E5%88%B6%E4%BF%A1%E5%8F%B7%E5%88%86%E7%B1%BB-Modulation-Classification/docs/Modulation_Classification_Report.pdf)
+  - 🖼️ [Training Loss & Accuracy Curves](Project1-%E8%B0%83%E5%88%B6%E4%BF%A1%E5%8F%B7%E5%88%86%E7%B1%BB-Modulation-Classification/docs/training_curves.png)
+- 📁 **[Project 2: Data-Driven Battery SOH Estimation via MLP Regression](Project2-%E7%94%B5%E6%B1%A0SOH%E5%81%A5%E5%BA%B7%E5%BA%A6%E5%9B%9E%E5%BD%92-Battery-SOH-Regression)**
+  - 📄 [MLP Regressor Training Script](Project2-%E7%94%B5%E6%B1%A0SOH%E5%81%A5%E5%BA%B7%E5%BA%A6%E5%9B%9E%E5%BD%92-Battery-SOH-Regression/src/battery_soh_regressor.py)
+  - 📄 [Trained Regressor Model Weights](Project2-%E7%94%B5%E6%B1%A0SOH%E5%81%A5%E5%BA%B7%E5%BA%A6%E5%9B%9E%E5%BD%92-Battery-SOH-Regression/src/battery_model.pth)
+  - 📁 [Battery Aging Excel Datasets](Project2-%E7%94%B5%E6%B1%A0SOH%E5%81%A5%E5%BA%B7%E5%BA%A6%E5%9B%9E%E5%BD%92-Battery-SOH-Regression/src/CLACEdata)
+  - 📄 [Chinese Academic Report (PDF)](Project2-%E7%94%B5%E6%B1%A0SOH%E5%81%A5%E5%BA%B7%E5%BA%A6%E5%9B%9E%E5%BD%92-Battery-SOH-Regression/docs/Lithium_Battery_SOH_Estimation_Report.pdf)
+  - 🖼️ [Battery SOH Prediction vs. Ground Truth Decay Plot](Project2-%E7%94%B5%E6%B1%A0SOH%E5%81%A5%E5%BA%B7%E5%BA%A6%E5%9B%9E%E5%BD%92-Battery-SOH-Regression/docs/soh_prediction_fit.png)
 
 ---
 
@@ -41,7 +41,7 @@ The model `ConstellationCNN` is constructed with three feature-extraction conv-p
 
 #### 3. Training and Results
 - **Splits & Parameters**: Randomly partitioned 3000 images into 80% train (2400) and 20% test (600). Trained using Adam optimizer ($lr=0.001$), Cross-Entropy Loss, Batch Size = 64, for 8 epochs.
-- **Performance**: The classifier starts at 58.33% accuracy in epoch 1 and reaches a final test accuracy of **80.83%** by epoch 8, demonstrating robust classification capabilities even under severe phase and frequency distortion.
+- **Historical result**: archived plots/reports are supporting material; no independent accuracy reproduction was run in this maintenance.
 
 ---
 
@@ -55,7 +55,7 @@ Four indirect health features are extracted from Excel cycling datasets:
 2. `cv_duration`: Constant voltage charging duration.
 3. `timeInterval`: Total duration of the charging cycle.
 4. `ica_max`: Differential capacity peak value ($dQ/dV_{max}$), indicating loss of active electrode materials.
-Features are normalized using Min-Max scaling to range $[0.0, 1.0]$.
+Features are normalized using Min-Max scaling using training-set extrema; held-out values may lie outside $[0.0, 1.0]$.
 
 #### 2. MLP Architecture
 The regressor `BatteryMLP` consists of an input layer, three hidden layers, and an output layer:
@@ -63,13 +63,9 @@ The regressor `BatteryMLP` consists of an input layer, three hidden layers, and 
 - **Hidden Layer 1**: Linear (4 $\to$ 64 nodes), ReLU.
 - **Hidden Layer 2**: Linear (64 $\to$ 32 nodes), ReLU.
 - **Hidden Layer 3**: Linear (32 $\to$ 16 nodes), ReLU.
-- **Output**: Linear (16 $\to$ 1 SOH prediction logit).
+- **Output**: Linear (16 $\to$ 1 SOH scalar prediction).
 
 #### 3. Training & Rigorous Evaluation
 - **Cross-Battery Validation**: To evaluate real-world generalization, the model was trained on all cycles from CS2 (33-38) and CX2_34 batteries (7117 samples) and validated on an entirely unseen test battery **CX2_36** (1913 samples) over its entire lifespan.
 - **Hyperparameters**: Trained using Adam ($lr=0.005$) and MSE Loss for 2000 epochs.
-- **Evaluation Metrics on CX2_36**:
-  - **Mean Squared Error (MSE)**: $0.000453$ (0.045% error variance)
-  - **Mean Absolute Error (MAE)**: $0.009470$ (<1.0% absolute average error)
-  - **R-squared ($R^2$) Score**: $0.9768$ (indicates the model explains 97.68% of the degradation variance)
-- **Discussion**: The SOH predicted trajectory tightly tracks the actual SOH decay curve, showing exceptional capability in capture of non-linear degradation accelerations at end-of-life cycles.
+- **Evaluation status**: historical figures are not a fresh measurement. The reorganized loader now rejects incomplete/nonfinite rows and defines its script directory. Two synthetic-input tests pass; no retraining was performed. The original training copy remains separately archived.

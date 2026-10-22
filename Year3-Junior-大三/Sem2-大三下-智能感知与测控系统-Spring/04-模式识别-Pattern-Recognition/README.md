@@ -6,19 +6,19 @@ This repository contains the academic portfolio for the **Pattern Recognition (�
 
 ## Portfolio Navigation
 
-- 📁 **[Project 1: 2D Gaussian Bayesian Decision Surface Visualization](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Pattern-Recognition/Project1-Bayesian-Decision-Boundary)**
-  - 📄 [Simulation Source Code](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Pattern-Recognition/Project1-Bayesian-Decision-Boundary/src/Bayesian_Decision_Boundary.m)
-  - 📄 [Project Presentation Report (PDF)](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Pattern-Recognition/Project1-Bayesian-Decision-Boundary/docs/Project_1_Bayesian_Decision_Boundary_Report.pdf)
-- 📁 **[Project 2: Nemo Image Segmentation via Bayesian Decision & Density Estimation](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Pattern-Recognition/Project2-Bayesian-Segmentation)**
-  - 📄 [Parametric Gaussian Classifier Code](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Pattern-Recognition/Project2-Bayesian-Segmentation/src/Gaussian.m)
-  - 📄 [Non-Parametric Parzen/k-NN Classifier Code](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Pattern-Recognition/Project2-Bayesian-Segmentation/src/ParzenkNN.m)
-  - 📄 [Ultimate Non-Parametric Area Filter Code](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Pattern-Recognition/Project2-Bayesian-Segmentation/src/NonParametric_Nemo.m)
-  - 📄 [Project Presentation Report (PDF)](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Pattern-Recognition/Project2-Bayesian-Segmentation/docs/Bayesian_Image_Segmentation_Report.pdf)
-- 📁 **[Project 3: SVM Face Detection based on LIBSVM](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Pattern-Recognition/Project3-SVM-Face-Detection)**
-  - 📄 [SVM Toy Classification Visualizer](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Pattern-Recognition/Project3-SVM-Face-Detection/src/SVM_Toy_Classification.m)
-  - 📄 [SVM Face Detection Classifier Code](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Pattern-Recognition/Project3-SVM-Face-Detection/src/SVM_Face_Classification.m)
-  - 📁 [LIBSVM MATLAB Binaries & C Source](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Pattern-Recognition/Project3-SVM-Face-Detection/src/libsvm)
-  - 📄 [Project Presentation Report (PDF)](file:///C:/Users/Liu/Desktop/大学文件/academic-portfolio/Pattern-Recognition/Project3-SVM-Face-Detection/docs/SVM_Face_Detection_Report.pdf)
+- 📁 **[Project 1: 2D Gaussian Bayesian Decision Surface Visualization](Project1-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%86%B3%E7%AD%96%E9%9D%A2-Bayesian-Decision-Boundary)**
+  - 📄 [Simulation Source Code](Project1-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%86%B3%E7%AD%96%E9%9D%A2-Bayesian-Decision-Boundary/Source-%E7%AE%97%E6%B3%95%E6%BA%90%E7%A0%81-src/Bayesian_Decision_Boundary.m)
+  - 📄 [Project Presentation Report (PDF)](Project1-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%86%B3%E7%AD%96%E9%9D%A2-Bayesian-Decision-Boundary/Docs-%E8%AE%B2%E4%B9%89%E4%B8%8E%E6%96%87%E6%A1%A3-docs/Project_1_Bayesian_Decision_Boundary_Report.pdf)
+- 📁 **[Project 2: Nemo Image Segmentation via Bayesian Decision & Density Estimation](Project2-%E5%88%86%E7%BA%A7%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E5%89%B2-Bayesian-Segmentation)**
+  - 📄 [Parametric Gaussian Classifier Code](Projects-%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB%E5%A4%A7%E4%BD%9C%E4%B8%9A2/Gaussian.m)
+  - 📄 [Non-Parametric Parzen/k-NN Classifier Code](Projects-%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB%E5%A4%A7%E4%BD%9C%E4%B8%9A2/ParzenkNN.m)
+  - 📄 [Ultimate Non-Parametric Area Filter Code](Project2-%E5%88%86%E7%BA%A7%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E5%89%B2-Bayesian-Segmentation/Source-%E7%AE%97%E6%B3%95%E6%BA%90%E7%A0%81-src/NonParametric_Nemo.m)
+  - 📄 [Project Presentation Report (PDF)](Project2-%E5%88%86%E7%BA%A7%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E5%89%B2-Bayesian-Segmentation/Docs-%E8%AE%B2%E4%B9%89%E4%B8%8E%E6%96%87%E6%A1%A3-docs/Bayesian_Image_Segmentation_Report.pdf)
+- 📁 **[Project 3: SVM Face Detection based on LIBSVM](Project3-SVM%E4%BA%BA%E8%84%B8%E6%A3%80%E6%B5%8B-SVM-Face-Detection)**
+  - 📄 SVM Toy Classification Visualizer (referenced resource not located in this archive)
+  - 📄 [SVM Face Detection Classifier Code](Project3-SVM%E4%BA%BA%E8%84%B8%E6%A3%80%E6%B5%8B-SVM-Face-Detection/src/SVM_Face_Classification.m)
+  - 📁 LIBSVM MATLAB Binaries & C Source (referenced resource not located in this archive)
+  - 📄 [Project Presentation Report (PDF)](Project3-SVM%E4%BA%BA%E8%84%B8%E6%A3%80%E6%B5%8B-SVM-Face-Detection/docs/SVM_Face_Detection_Report.pdf)
 
 ---
 
@@ -63,7 +63,7 @@ Assuming class-conditional densities follow multivariate Gaussian distributions,
 When the underlying distributions are highly non-Gaussian, non-parametric approaches are employed:
 *   **Parzen Window Estimation**: Uses hypercubic or Gaussian kernel functions to accumulate probability densities locally:
     $$p(\mathbf{x}) = \frac{1}{N V_N} \sum_{i=1}^{N} \varphi\left(\frac{\mathbf{x} - \mathbf{x}_i}{h_N}\right)$$
-    The bandwidth $h_N$ (smoothness parameter) is dynamically tuned (e.g., $h = 0.08$) to prevent under- or over-smoothing.
+    The checked ParzenkNN.m sets a fixed bandwidth $h = 0.08$; there is no automatic bandwidth search.
 *   **k-Nearest Neighbor (k-NN) Density Estimation**: Varies the volume of the local neighborhood to include exactly $k$ nearest training samples (e.g., $k = 15$):
     $$p(\mathbf{x}) = \frac{k}{N V(\mathbf{x})}$$
 
@@ -77,7 +77,7 @@ To suppress isolated pixel noise in the segmented image, a morphological post-pr
 This project builds a binary face detector (Face vs. Non-Face) using Support Vector Machines (SVM) via the compiled MATLAB interfaces of the `LIBSVM` library.
 
 #### 1. Formulations & Kernel Functions
-Support Vector Machines compute a separating hyperplane that maximizes the margin between classes. Two configurations are tested in `SVM_Toy_Classification.m`:
+Support Vector Machines compute a separating hyperplane that maximizes the margin between classes. The following kernel formulas are theoretical references; the named toy script is missing. The available face-classification script uses RBF C-SVC with grid search and five-fold cross-validation:
 *   **Linear SVM**: Suitable for linearly separable datasets, defining the boundary as:
     $$\mathbf{w}^T \mathbf{x} + b = 0$$
 *   **Radial Basis Function (RBF) Kernel SVM**: Maps the inputs into an infinite-dimensional Hilbert space to handle complex non-linear structures:
@@ -87,4 +87,4 @@ Support Vector Machines compute a separating hyperplane that maximizes the margi
 #### 2. Face Detection & Feature Scaling
 The file `SVM_Face_Classification.m` trains a classifier on high-dimensional gray pixel vectors (size $N \times 361$).
 *   **Feature Scaling**: Because SVM is highly sensitive to the scale of input features, pixel intensities are normalized from $[0, 255]$ to the range $[-1, 1]$. Normalization prevents features with large numeric ranges from dominating the optimization process, ensuring fast gradient convergence and avoiding numerical instability during solver execution.
-*   **Results**: The resulting model classifies target face matrices, outputting detection scores and validation accuracy recorded in `task3_result.txt`.
+*   **Results**: The resulting model classifies target face matrices, writing image IDs and predicted labels to `task3_result.txt`; that file is not an accuracy report.
