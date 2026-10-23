@@ -1,62 +1,33 @@
-# C Programming Labs (C语言实验)
+# C Programming Labs / C语言实验
 
-This repository contains the academic portfolio for the course **C Programming Labs (C语言实验)**, completed by **Chaoran Liu (刘超然)**. 
+Course assignments and source examples archived by Chaoran Liu (刘超然). The current layout contains separate lab programs, two struct exercises and a course project, rather than one consolidated source file.
 
-The portfolio showcases a complete set of fundamental and advanced software engineering exercises in the C programming language, spanning basic syntax, control structures, arrays, modular functions, pointers, and user-defined structure types (`struct`).
+## Actual source files
 
----
+Each file can contain its own `main`; inspect and build the selected program separately. This maintenance did not compile or run the historical C examples.
 
-## Portfolio Directory Structure
+| File | Archive location |
+| --- | --- |
+| `实验-Lab-实验1-1.c` | [Labs-课内实验/Lab01-实验01/实验-Lab-实验1-1.c](Labs-%E8%AF%BE%E5%86%85%E5%AE%9E%E9%AA%8C/Lab01-%E5%AE%9E%E9%AA%8C01/%E5%AE%9E%E9%AA%8C-Lab-%E5%AE%9E%E9%AA%8C1-1.c) |
+| `实验-Lab-实验1-2.c` | [Labs-课内实验/Lab01-实验01/实验-Lab-实验1-2.c](Labs-%E8%AF%BE%E5%86%85%E5%AE%9E%E9%AA%8C/Lab01-%E5%AE%9E%E9%AA%8C01/%E5%AE%9E%E9%AA%8C-Lab-%E5%AE%9E%E9%AA%8C1-2.c) |
+| `实验-Lab-实验1-3.c` | [Labs-课内实验/Lab01-实验01/实验-Lab-实验1-3.c](Labs-%E8%AF%BE%E5%86%85%E5%AE%9E%E9%AA%8C/Lab01-%E5%AE%9E%E9%AA%8C01/%E5%AE%9E%E9%AA%8C-Lab-%E5%AE%9E%E9%AA%8C1-3.c) |
+| `实验-Lab-实验2-1.c` | [Labs-课内实验/Lab02-实验02/实验-Lab-实验2-1.c](Labs-%E8%AF%BE%E5%86%85%E5%AE%9E%E9%AA%8C/Lab02-%E5%AE%9E%E9%AA%8C02/%E5%AE%9E%E9%AA%8C-Lab-%E5%AE%9E%E9%AA%8C2-1.c) |
+| `实验-Lab-实验2-2.c` | [Labs-课内实验/Lab02-实验02/实验-Lab-实验2-2.c](Labs-%E8%AF%BE%E5%86%85%E5%AE%9E%E9%AA%8C/Lab02-%E5%AE%9E%E9%AA%8C02/%E5%AE%9E%E9%AA%8C-Lab-%E5%AE%9E%E9%AA%8C2-2.c) |
+| `实验-Lab-实验3.c` | [Labs-课内实验/Lab03-实验03/实验-Lab-实验3.c](Labs-%E8%AF%BE%E5%86%85%E5%AE%9E%E9%AA%8C/Lab03-%E5%AE%9E%E9%AA%8C03/%E5%AE%9E%E9%AA%8C-Lab-%E5%AE%9E%E9%AA%8C3.c) |
+| `实验-Lab-实验4.c` | [Labs-课内实验/Lab04-实验04/实验-Lab-实验4.c](Labs-%E8%AF%BE%E5%86%85%E5%AE%9E%E9%AA%8C/Lab04-%E5%AE%9E%E9%AA%8C04/%E5%AE%9E%E9%AA%8C-Lab-%E5%AE%9E%E9%AA%8C4.c) |
+| `C语言课程.c` | [Project1-期末大作业工程/C语言课程.c](Project1-%E6%9C%9F%E6%9C%AB%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%B7%A5%E7%A8%8B/C%E8%AF%AD%E8%A8%80%E8%AF%BE%E7%A8%8B.c) |
+| `ch10_Scores_Management.c` | [Source-核心源码/ch10_Scores_Management.c](Source-%E6%A0%B8%E5%BF%83%E6%BA%90%E7%A0%81/ch10_Scores_Management.c) |
+| `ch9_Structs_Average.c` | [Source-核心源码/ch9_Structs_Average.c](Source-%E6%A0%B8%E5%BF%83%E6%BA%90%E7%A0%81/ch9_Structs_Average.c) |
 
-```
-C-Programming-Labs/
-│
-├── README.md                                 # This document
-│
-├── src/                                      # C language source files
-│   ├── C_Course_Exercises.c                  # Grammar, selections, loops, and array exercises
-│   ├── ch9_Structs_Average.c                 # Struct arrays and average score calculations
-│   └── ch10_Scores_Management.c              # Struct pointers and score queries
-│
-└── docs/                                     # PDF Laboratory Reports
-    ├── Lab_Report_1_Basic_Structures.pdf     # Lab 1: Sequence, branch, and loop structures
-    ├── Lab_Report_2_Arrays.pdf               # Lab 2: Multi-dimensional arrays
-    ├── Lab_Report_3_Functions.pdf            # Lab 3: User-defined functions and parameters
-    └── Lab_Report_4_Structures.pdf           # Lab 4: Structure data types and arrays
-```
+## Reports
 
----
+- [Lab_Report_1_Basic_Structures.pdf](Docs-%E8%AF%BE%E4%BB%B6%E4%B8%8E%E6%96%87%E6%A1%A3-docs/Lab_Report_1_Basic_Structures.pdf)
+- [Lab_Report_2_Arrays.pdf](Docs-%E8%AF%BE%E4%BB%B6%E4%B8%8E%E6%96%87%E6%A1%A3-docs/Lab_Report_2_Arrays.pdf)
+- [Lab_Report_3_Functions.pdf](Docs-%E8%AF%BE%E4%BB%B6%E4%B8%8E%E6%96%87%E6%A1%A3-docs/Lab_Report_3_Functions.pdf)
+- [Lab_Report_4_Structures.pdf](Docs-%E8%AF%BE%E4%BB%B6%E4%B8%8E%E6%96%87%E6%A1%A3-docs/Lab_Report_4_Structures.pdf)
 
-## 1. Core Programming Topics
+## Version and reproduction boundaries
 
-All programming projects are categorized into four core laboratory phases, matching the source code implementations in src/ (referenced resource not located in this archive) and detailed documentation in docs/ (referenced resource not located in this archive).
+The old README referred to `src/`, `docs/` and a 1000-line `C_Course_Exercises.c`; those paths/file were not located in this archive. The table above lists the tracked source instead. Reports are historical supporting documents, not proof that every reported function exists in a matching standalone program or has been rerun.
 
-### A. Basic Control Structures (顺序、分支与循环结构)
-*   **Concepts**: Sequence executions; conditional branching using `if-else` and `switch-case` blocks; iterative loops using `for`, `while`, and `do-while` structures.
-*   **Implementation**: Covered in the comprehensive code bank C_Course_Exercises.c (referenced resource not located in this archive) (includes relational/logical expressions, math routines, and nested loops).
-*   **Report**: [Lab_Report_1_Basic_Structures.pdf](Docs-%E8%AF%BE%E4%BB%B6%E4%B8%8E%E6%96%87%E6%A1%A3-docs/Lab_Report_1_Basic_Structures.pdf)
-
-### B. Arrays and String Buffers (数组与字符串处理)
-*   **Concepts**: Linear search and array index calculations; bubble sort and selection sort algorithms; multidimensional arrays for matrix calculations; string buffers and character arrays.
-*   **Implementation**: Code examples in C_Course_Exercises.c (referenced resource not located in this archive) demonstrating sorting arrays and index searches.
-*   **Report**: [Lab_Report_2_Arrays.pdf](Docs-%E8%AF%BE%E4%BB%B6%E4%B8%8E%E6%96%87%E6%A1%A3-docs/Lab_Report_2_Arrays.pdf)
-
-### C. Modular Functions and Pointers (函数与指针)
-*   **Concepts**: Function definition, prototyping, and scoping; variable scope (local vs. global, static variables); argument passing mechanisms (pass-by-value vs. pass-by-pointer/address).
-*   **Implementation**: Subroutine definitions and address-passing exercises in C_Course_Exercises.c (referenced resource not located in this archive).
-*   **Report**: [Lab_Report_3_Functions.pdf](Docs-%E8%AF%BE%E4%BB%B6%E4%B8%8E%E6%96%87%E6%A1%A3-docs/Lab_Report_3_Functions.pdf)
-
-### D. User-Defined Structures (结构体数据结构)
-*   **Concepts**: Packaging heterogeneous data fields (e.g., student records containing ID, name, and grades) into a single user-defined datatype `struct`. Accessing structure members using member operator (`.`) and structure pointer arrow operator (`->`).
-*   **Programs**:
-    *   [ch9_Structs_Average.c](Source-%E6%A0%B8%E5%BF%83%E6%BA%90%E7%A0%81/ch9_Structs_Average.c): Implements struct arrays to store student scores and compute the average score for each student.
-    *   [ch10_Scores_Management.c](Source-%E6%A0%B8%E5%BF%83%E6%BA%90%E7%A0%81/ch10_Scores_Management.c): Manages student scores using structure pointers and queries English/Math performance.
-*   **Report**: [Lab_Report_4_Structures.pdf](Docs-%E8%AF%BE%E4%BB%B6%E4%B8%8E%E6%96%87%E6%A1%A3-docs/Lab_Report_4_Structures.pdf)
-
----
-
-## 2. File Mappings & Executions
-
-1.  **C_Course_Exercises.c**: A consolidated C file exceeding 1000 lines of standard ANSI C, compiled and tested under Microsoft Visual Studio. It represents a continuous journal of basic to intermediate C exercises.
-2.  **ch9_Structs_Average.c & ch10_Scores_Management.c**: Focused programs showcasing intermediate programming concepts: struct layouts and struct pointers, crucial for understanding database structures and hardware registers.
-3.  **PDF Reports**: All four laboratory reports have been exported as high-fidelity PDF documents from original Word files, retaining all source codes, screenshots, and teacher annotations.
+Read the selected source for its input format and compiler assumptions. Keep IDE project files when needed; generated Visual Studio caches are not source. No new benchmark, portability or successful-compilation claim is made here.

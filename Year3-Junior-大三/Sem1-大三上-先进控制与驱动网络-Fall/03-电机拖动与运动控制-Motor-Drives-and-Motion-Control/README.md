@@ -50,8 +50,8 @@ Where:
 
 ### Files
 *   **Simulink Model**: [DC_Motor_Open_Loop_Control.slx](Simulation-Labs-%E5%8F%8C%E9%97%AD%E7%8E%AF%E7%B3%BB%E7%BB%9F%E4%BB%BF%E7%9C%9F/Source-%E4%BB%BF%E7%9C%9F%E6%A8%A1%E5%9E%8B-src/DC_Motor_Open_Loop_Control.slx)
-*   **Simulation Report**: Simulation_Lab_Report_1_DC_Motor.pdf (referenced resource not located in this archive)
-*   **Physical Lab Report**: Physical_Lab_Report_DC_Motor_Experiment.pdf (referenced resource not located in this archive) - Detailing physical bench setups, parameter measurements, and measured vs simulated curves.
+*   **Simulation Report**: Simulation_Lab_Report_1_DC_Motor.pdf [not archived](#unavailable-references)
+*   **Physical Lab Report**: Physical_Lab_Report_DC_Motor_Experiment.pdf [not archived](#unavailable-references) - Detailing physical bench setups, parameter measurements, and measured vs simulated curves.
 
 ---
 
@@ -72,4 +72,10 @@ The script [Motor_Mechanical_Characteristics_Plot.m](Simulation-Labs-%E5%8F%8C%E
 ### Files
 *   **Simulink Model**: [AC_Induction_Motor_Open_Loop_Control.slx](Simulation-Labs-%E5%8F%8C%E9%97%AD%E7%8E%AF%E7%B3%BB%E7%BB%9F%E4%BB%BF%E7%9C%9F/Source-%E4%BB%BF%E7%9C%9F%E6%A8%A1%E5%9E%8B-src/AC_Induction_Motor_Open_Loop_Control.slx)
 *   **Plotting Script**: [Motor_Mechanical_Characteristics_Plot.m](Simulation-Labs-%E5%8F%8C%E9%97%AD%E7%8E%AF%E7%B3%BB%E7%BB%9F%E4%BB%BF%E7%9C%9F/Source-%E4%BB%BF%E7%9C%9F%E6%A8%A1%E5%9E%8B-src/Motor_Mechanical_Characteristics_Plot.m)
-*   **Simulation Report**: Simulation_Lab_Report_2_AC_Motor.pdf (referenced resource not located in this archive)
+*   **Simulation Report**: Simulation_Lab_Report_2_AC_Motor.pdf [not archived](#unavailable-references)
+
+<a id="unavailable-references"></a>
+
+## Unavailable references
+
+Items marked **not archived** are names from earlier course documentation that were not located in this repository. They are not runnable entry points or evidence of a completed experiment. Use the existing source links and files; reports, models or data still need their original version before reproduction.

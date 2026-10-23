@@ -15,9 +15,9 @@ This repository contains the academic portfolio for the **Pattern Recognition (�
   - 📄 [Ultimate Non-Parametric Area Filter Code](Project2-%E5%88%86%E7%BA%A7%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E5%89%B2-Bayesian-Segmentation/Source-%E7%AE%97%E6%B3%95%E6%BA%90%E7%A0%81-src/NonParametric_Nemo.m)
   - 📄 [Project Presentation Report (PDF)](Project2-%E5%88%86%E7%BA%A7%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E5%89%B2-Bayesian-Segmentation/Docs-%E8%AE%B2%E4%B9%89%E4%B8%8E%E6%96%87%E6%A1%A3-docs/Bayesian_Image_Segmentation_Report.pdf)
 - 📁 **[Project 3: SVM Face Detection based on LIBSVM](Project3-SVM%E4%BA%BA%E8%84%B8%E6%A3%80%E6%B5%8B-SVM-Face-Detection)**
-  - 📄 SVM Toy Classification Visualizer (referenced resource not located in this archive)
+  - 📄 SVM Toy Classification Visualizer [not archived](#unavailable-references)
   - 📄 [SVM Face Detection Classifier Code](Project3-SVM%E4%BA%BA%E8%84%B8%E6%A3%80%E6%B5%8B-SVM-Face-Detection/src/SVM_Face_Classification.m)
-  - 📁 LIBSVM MATLAB Binaries & C Source (referenced resource not located in this archive)
+  - 📁 LIBSVM MATLAB Binaries & C Source [not archived](#unavailable-references)
   - 📄 [Project Presentation Report (PDF)](Project3-SVM%E4%BA%BA%E8%84%B8%E6%A3%80%E6%B5%8B-SVM-Face-Detection/docs/SVM_Face_Detection_Report.pdf)
 
 ---
@@ -88,3 +88,9 @@ Support Vector Machines compute a separating hyperplane that maximizes the margi
 The file `SVM_Face_Classification.m` trains a classifier on high-dimensional gray pixel vectors (size $N \times 361$).
 *   **Feature Scaling**: Because SVM is highly sensitive to the scale of input features, pixel intensities are normalized from $[0, 255]$ to the range $[-1, 1]$. Normalization prevents features with large numeric ranges from dominating the optimization process, ensuring fast gradient convergence and avoiding numerical instability during solver execution.
 *   **Results**: The resulting model classifies target face matrices, writing image IDs and predicted labels to `task3_result.txt`; that file is not an accuracy report.
+
+<a id="unavailable-references"></a>
+
+## Unavailable references
+
+Items marked **not archived** are names from earlier course documentation that were not located in this repository. They are not runnable entry points or evidence of a completed experiment. Use the existing source links and files; reports, models or data still need their original version before reproduction.

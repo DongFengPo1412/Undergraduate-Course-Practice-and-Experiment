@@ -39,7 +39,7 @@ Where:
 *   $T$ is the sampling period.
 
 ### Design and Analysis
-Using the Simulink model Digital_PID_Control_System.slx (referenced resource not located in this archive), the effects of $K_p, K_i, K_d$ parameters and the sampling period $T$ on the system overshoot, settling time, and steady-state error are systematically simulated and evaluated.
+The report discusses digital PID parameter/sampling-period analysis. The referenced `Digital_PID_Control_System.slx` is [not archived](#unavailable-references), so this section is a report-based design explanation rather than a verified executable simulation.
 Detailed analysis is provided in the report [Lab_Report_1_Digital_PID_Control.pdf](Simulation-Labs-%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E4%BB%BF%E7%9C%9F/docs/Lab_Report_1_Digital_PID_Control.pdf).
 
 ---
@@ -59,5 +59,11 @@ $$G(z) = (1 - z^{-1}) \mathcal{Z}\left\{ \frac{10}{s^2(s+1)} \right\} = \frac{3.
 2.  **Ripple-Free Deadbeat Control (无纹波最少拍)**: By placing constraints on the closed-loop transfer function to ensure the controller $D(z)$ cancels the plant's open-loop zeros (excluding $z=1$), the control signal settles to a constant value, thereby eliminating inter-sample oscillations.
 
 ### Files
-*   **Simulink Model**: Deadbeat_Control_System.slx (referenced resource not located in this archive) (Simulates step/ramp responses and evaluates control signals to verify the presence or absence of ripples).
+* **Missing model reference**: `Deadbeat_Control_System.slx` is [not archived](#unavailable-references). The report describes step/ramp and ripple analysis; no matching executable model or fresh simulation result is established here.
 *   **Simulation Report**: [Lab_Report_2_Deadbeat_Control.pdf](Simulation-Labs-%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E4%BB%BF%E7%9C%9F/docs/Lab_Report_2_Deadbeat_Control.pdf)
+
+<a id="unavailable-references"></a>
+
+## Unavailable references
+
+Items marked **not archived** are names from earlier course documentation that were not located in this repository. They are not runnable entry points or evidence of a completed experiment. Use the existing source links and files; reports, models or data still need their original version before reproduction.
