@@ -2,7 +2,7 @@
 
 学部 19 科目のソース、シミュレーション、実験レポート、参考資料を学年・学期順に整理したアーカイブです。授業当時の版と独立リポジトリの後続保守版を区別します。
 
-[简体中文](README.md) · [English](README_EN.md) · [日本語](README_JA.md)
+[简体中文](README_ZH.md) · [English](README.md) · **日本語**
 
 [Technical notes](docs/technical-notes.ja.md) · [Setup](docs/setup.ja.md)
 

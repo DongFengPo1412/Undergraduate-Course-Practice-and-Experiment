@@ -1,16 +1,16 @@
 # Undergraduate Course Practice and Experiments
 
-本科 19 门课程的源码、仿真工程、实验报告与参考资料归档，按学年和学期索引。课程原始版本与独立项目的后续维护版本分开保留。
+Source, simulation projects, laboratory reports, and reference material from 19 undergraduate courses, indexed by year and semester. Course versions remain distinct from later maintained standalone projects.
 
-[简体中文](README.md) · [English](README_EN.md) · [日本語](README_JA.md)
+[简体中文](README_ZH.md) · **English** · [日本語](README_JA.md)
 
-[Technical notes](docs/technical-notes.zh-CN.md) · [Setup](docs/setup.zh-CN.md)
+[Technical notes](docs/technical-notes.en.md) · [Setup](docs/setup.en.md)
 
-## 归档范围
+## Archive scope
 
-内容包含个人作业、团队实验、教师参考工程及第三方库，不应整体称为个人原创成果。目录存在不等于该实验已经复现；报告、图片和权重的历史结果均没有在本轮重新测量。
+The collection includes personal assignments, team experiments, instructor examples, and third-party libraries. It is not uniformly original personal work. A directory is not a reproduction result; report figures, images, and model checkpoints were not remeasured in this maintenance.
 
-## 课程索引
+## Course index
 
 | # | Course directory | Year / semester |
 | --- | --- | --- |
@@ -34,13 +34,13 @@
 | 18 | [04-模式识别-Pattern-Recognition](Year3-Junior-%E5%A4%A7%E4%B8%89/Sem2-%E5%A4%A7%E4%B8%89%E4%B8%8B-%E6%99%BA%E8%83%BD%E6%84%9F%E7%9F%A5%E4%B8%8E%E6%B5%8B%E6%8E%A7%E7%B3%BB%E7%BB%9F-Spring/04-%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB-Pattern-Recognition) | Year3 / Sem2 |
 | 19 | [05-脉冲功率技术-Pulse-Power-Technology](Year3-Junior-%E5%A4%A7%E4%B8%89/Sem2-%E5%A4%A7%E4%B8%89%E4%B8%8B-%E6%99%BA%E8%83%BD%E6%84%9F%E7%9F%A5%E4%B8%8E%E6%B5%8B%E6%8E%A7%E7%B3%BB%E7%BB%9F-Spring/05-%E8%84%89%E5%86%B2%E5%8A%9F%E7%8E%87%E6%8A%80%E6%9C%AF-Pulse-Power-Technology) | Year3 / Sem2 |
 
-## 资料示例
+## Example material
 
 ![Control course material](docs/images/demo_control_response.png)
 
 ![Computer vision course material](docs/images/demo_computer_vision.jpg)
 
-## 后续维护项目
+## Maintained standalone projects
 
 - [ChessRobot](https://github.com/TJS-Git-Hub/ChessRobot)
 - [All-in-One-Smart-Access-Control-System](https://github.com/DongFengPo1412/All-in-One-Smart-Access-Control-System)
@@ -53,12 +53,12 @@
 - [Multi-class-Handwritten-Character-Recognition-System-Based-on-CNN](https://github.com/DongFengPo1412/Multi-class-Handwritten-Character-Recognition-System-Based-on-CNN)
 - [Virtual-Mouse-and-Gesture-Control-System](https://github.com/DongFengPo1412/Virtual-Mouse-and-Gesture-Control-System)
 
-## 使用与维护
+## Use and maintenance
 
-先进入具体课程目录，按实际工程文件选择 MATLAB/Simulink、PLECS、Vivado、STM32CubeIDE 或 Python 环境；本库没有统一构建命令。需要数据、外部库或实体设备的实验应单独检查。缺失资源的旧链接已改为明确说明，不构造替代文件。
+Enter a course directory and select MATLAB/Simulink, PLECS, Vivado, STM32CubeIDE, or Python from its actual project files; there is no repository-wide build command. Check datasets, external libraries, and hardware separately. Missing old references are labeled as unavailable rather than replaced with invented files.
 
-## 验证边界
+## Verification boundaries
 
-本轮：校正本机旧路径与改名目录引用，纠正首页过度表述；296 个确认的 IDE/本机编译中间文件停止 Git 跟踪，本地文件保留、历史提交可恢复。修复 SOH 回归入口的未定义路径变量与无效数据处理，2 项输入测试通过。没有重新训练模型、批量运行课程仿真、烧录或重做课程实验。
+This maintenance repairs machine-local and renamed-path references and removes overstated overview claims. It stops tracking 296 confirmed IDE/native build intermediates while preserving every local file and prior Git history. The SOH entry point now defines its script path and rejects invalid input; two loader cases passed. No model retraining, bulk course simulation, flashing, or repeated laboratory experiment was performed.
 
-MIT 文本见 [LICENSE](LICENSE)；教师讲义、第三方代码、图片与数据仍以各自权利和许可证为准。
+See [LICENSE](LICENSE) for the MIT text; instructor material, third-party code, images, and data retain their own rights and licenses.
